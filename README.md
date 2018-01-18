@@ -1,9 +1,8 @@
-# Start
+# WI DeMolay
 
-Starter theme for [tapps](http://tapps.design) to use (and I suppose others can use it too at some point).
+Custom theme for [Wisconsin DeMolay](http://widemolay.org) website redesign. Theme started with the [start](http://github.com/tracyapps/start) starter theme.
 
-
-### What is the start?
+### What is start?
 The start is a blank WordPress theme fully equipped with ACF site options & page sections to make things easy.
 
 ### What comes with start?
