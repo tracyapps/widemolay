@@ -55,59 +55,6 @@ function start_custom_post_types() {
 
 
 	/**
-	 * CPT: portfolio
-	 */
-	register_post_type( 'portfolio', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
-		// let's now add all the options for this post type
-		array(
-			'labels' => array(
-				'name' => __( 'Portfolio', 'start' ),
-				'singular_name' => __( 'Portfolio Post', 'start' ),
-				'all_items' => __( 'All Portfolio Posts', 'start' ),
-				'add_new' => __( 'Add New', 'start' ),
-				'add_new_item' => __( 'Add New', 'start' ),
-				'edit' => __( 'Edit', 'start' ),
-				'edit_item' => __( 'Edit', 'start' ),
-				'new_item' => __( 'New Portfolio Post', 'start' ),
-				'view_item' => __( 'View Portfolio Post', 'start' ),
-				'search_items' => __( 'Search Portfolio', 'start' ),
-				'not_found' => __( 'Nothing found.', 'start' ),
-				'not_found_in_trash' => __( 'Nothing found in Trash', 'start' ),
-				'parent_item_colon' => ''
-			),
-			/* end of arrays */
-			'description' => __( 'All the awesome things we made', 'start' ),
-			'public' => true,
-			'publicly_queryable' => true,
-			'exclude_from_search' => false,
-			'show_ui' => true,
-			'query_var' => true,
-			'menu_position' => 4,
-			'menu_icon' => 'dashicons-portfolio',
-			'rewrite' => array(
-				'slug' => 'work',
-				'with_front' => false
-			),
-			/* you can specify its url slug */
-			'has_archive' => 'work',
-			/* you can rename the slug here */
-			'capability_type' => 'post',
-			'hierarchical' => false,
-			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array(
-				'title',
-				'editor',
-				'author',
-				'thumbnail',
-				'excerpt',
-				'custom-fields',
-				'revisions',
-				'sticky'
-			)
-		) /* end of options */
-	); /* end of register CPT: portfolio */
-
-	/**
 	 * CPT: landing page
 	 */
 	register_post_type( 'landing-page', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
@@ -168,35 +115,6 @@ function start_custom_post_types() {
 // adding the function to the Wordpress init
 add_action( 'init', 'start_custom_post_types' );
 
-
-/**
- * custom Tax: project_type (hierarchical)
- */
-
-register_taxonomy( 'service',
-	array( 'portfolio' ),
-	/* if you change the name of register_post_type( 'custom_type', then you have to change this */
-	array(
-		'hierarchical' => true,
-		/* if this is false, it acts like tags */
-		'labels' => array(
-			'name' => __( 'Service', 'start' ),
-			'singular_name' => __( 'Service', 'start' ),
-			'search_items' => __( 'Search Services', 'start' ),
-			'all_items' => __( 'All Services', 'start' ),
-			'parent_item' => __( 'Parent Service', 'start' ),
-			'parent_item_colon' => __( 'Parent Service:', 'start' ),
-			'edit_item' => __( 'Edit Service', 'start' ),
-			'update_item' => __( 'Update Service', 'start' ),
-			'add_new_item' => __( 'Add New Service', 'start' ),
-			'new_item_name' => __( 'New Service', 'start' )
-		),
-		'show_admin_column' => true,
-		'show_ui' => true,
-		'query_var' => true,
-		'rewrite' => array( 'slug' => 'service' ),
-	)
-);
 
 
 /**
