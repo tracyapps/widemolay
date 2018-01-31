@@ -35,7 +35,7 @@
 	<div class="header-content">
 		
 		<div class="logo">
-			<?php get_template_part( 'parts/content', 'logo' ); ?>
+			<a href="<?php echo bloginfo( 'home' ); ?>"><?php get_template_part( 'parts/content', 'logo' ); ?></a>
 		</div>
 	</div>
 
