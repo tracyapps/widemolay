@@ -1,34 +1,132 @@
+.yellow-fill {
+	fill: $yellow;
+}
+.main-letter-color-fill {
+	fill: $logo-blue;
+}
+.red-fill {
+	fill: $red;
+}
+
 .site-header {
 	background: $header-background-color;
+	min-height: 30vh;
+	transition: all 1500ms ease-in-out;
+	transform: rotate(-2.1deg) skew(-2.1deg);
+	padding-top: 8vh;
+	margin-top: -7vh;
+	margin-bottom: -3vh;
+	position: relative;
+	z-index: 1000;
+
+	.header-content {
+		transform: rotate(2.1deg);
+		transition: all 1500ms ease-in-out;
+	}
+
+	.logo {
+		height: 12vh;
+		width: auto;
+		margin: 6vh auto;
+		transform: skew(2.1deg);
+		transition: all 1500ms ease-in-out;
+
+		svg {
+			max-height: 100%;
+		}
+		.main-letter-color-fill {
+			fill: $white;
+		}
+	}
 
 	.main-navigation {
 
-		text-transform: uppercase;
+		background-color: $yellow;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		display: inline-block;
+		transform: translateY(1px);
+		font-size: 85%;
+
 
 		.mobile-menu-toggle {
 			display: none;
 		}
 
 		ul {
+			list-style: none;
 			margin: 0;
-			padding: 0.6em 1em;
+			padding: 0;
 			display: flex;
-			align-items: center;
 			transition: all $button-transition-speed ease-in-out;
 
 
-			li {
-				list-style-type: none;
+			> li {
 				flex: 1;
+				text-align: center;
+				transition: all $button-transition-speed ease-in-out;
+				position: relative;
 
-				a {
+				&.current_page_item {
+					background: rgba( $light, 0.6 );
+				}
+
+				&:hover {
+					background: rgba( $light, 0.6 );
+
+					ul {
+						height: auto;
+						background: $yellow;
+
+						ul {
+							position: relative;
+							background: rgba( $light, 0.05 );
+							border-left: 8px solid $yellow;
+							//border-bottom: 1px solid rgba( $dark-blue, 0.5 );
+
+							li {
+								border: 1px solid rgba( $yellow, 0.5 );
+								margin-top: -1px;
+							}
+
+							a {
+								padding: 0.35em 1em 0.35em 3em;
+							}
+						}
+					}
+				}
+
+				ul {
+					position: absolute;
+					width: 100%;
+					display: block;
+					height: 0;
+					overflow: hidden;
 					transition: all $button-transition-speed ease-in-out;
+
+					li {
+						text-align: left;
+					}
+
 				}
 
 			}
 
 
 		}
+
+		a {
+			color: $dark;
+			text-decoration: none;
+			padding: 1em;
+			display: inline-block;
+			transform: rotate(2.1deg);
+			transition: all $button-transition-speed ease-in-out;
+
+		}
+
 		@include tablet-down {
 
 			.mobile-menu-toggle {
@@ -77,20 +175,122 @@
 	}
 
 	&.smaller {
+		background-color: $light;
+		transform: rotate(0deg) skew(0deg);
 
+		.header-content {
+			transform: rotate(0deg);
+		}
+
+		.logo {
+			transform: skew(0deg);
+
+			svg {
+				.main-letter-color-fill {
+					fill: $logo-blue;
+				}
+			}
+		}
+
+		.main-navigation,
+		.main-navigation-sticky {
+			a {
+				transform: rotate(0deg);
+				padding: 0.5em 1em;
+			}
+		}
 	}
 
 }
-.site-logo {
+
+.main-navigation-sticky {
+	background-color: $yellow;
+	font-size: 85%;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+	display: none;
+
+	&.show {
+		display: inline-block;
+	}
+
+	.mobile-menu-toggle {
+		display: none;
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		transition: all $button-transition-speed ease-in-out;
 
 
-}
+		> li {
+			flex: 1;
+			text-align: center;
+			transition: all $button-transition-speed ease-in-out;
+			position: relative;
 
-.smaller {
-	.site-logo {
+			&.current_page_item {
+				background: rgba( $light, 0.6 );
+			}
+
+			&:hover {
+				background: rgba( $light, 0.6 );
+
+				ul {
+					height: auto;
+					background: $yellow;
+
+					ul {
+						position: relative;
+						background: rgba( $light, 0.05 );
+						border-left: 8px solid $yellow;
+
+						li {
+							border: 1px solid rgba( $yellow, 0.5 );
+							margin-top: -1px;
+						}
+
+						a {
+							padding: 0.35em 1em 0.35em 3em;
+						}
+					}
+				}
+			}
+
+			ul {
+				position: absolute;
+				width: 100%;
+				display: block;
+				height: 0;
+				overflow: hidden;
+				transition: all $button-transition-speed ease-in-out;
+
+				li {
+					text-align: left;
+				}
+
+			}
+
+		}
+
 
 	}
 
+	a {
+		color: $dark;
+		text-decoration: none;
+		padding: 0.5em 1em;
+		display: inline-block;
+		transition: all $button-transition-speed ease-in-out;
+
+	}
 }
 
 @include tablet-up {

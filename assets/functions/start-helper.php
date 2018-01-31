@@ -19,6 +19,22 @@ function the_slug( $echo=true ){
 	return $slug;
 }
 
+/**
+ * Add "has-featured-image" class if there's a featured image.
+ *
+ * @param $classes
+ * @return array
+ */
+
+function add_featured_image_body_class( $classes ) {
+	global $post;
+	if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID)) {
+		$classes[] = 'has-featured-image';
+	}
+	return $classes;
+}
+add_filter( 'body_class', 'add_featured_image_body_class' );
+
 
 function start_the_archive_title( $before = '', $after = '', $span_class = '' ) {
 	$title = start_get_the_archive_title( $span_class );

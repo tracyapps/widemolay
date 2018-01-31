@@ -32,15 +32,34 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header" role="banner">
-	<div class="site-logo">
+	<div class="header-content">
 		
-		<h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php echo get_bloginfo( 'name' ); ?></a></h1>
+		<div class="logo">
+			<?php get_template_part( 'parts/content', 'logo' ); ?>
+		</div>
 	</div>
-	<div class="main-navigation">
+
+	<nav class="main-navigation">
 		<div class="mobile-menu-toggle"><a href="#menu-main-navigation" id="toggle">Menu</a></div>
 		<?php start_top_nav(); ?>
-	</div>
+	</nav>
 
 
 </header> <!-- / .site-header -->
+
+<nav class="main-navigation-sticky">
+	<div class="mobile-menu-toggle"><a href="#menu-main-navigation" id="toggle">Menu</a></div>
+	<?php start_top_nav(); ?>
+</nav>
+
 <div class="site-content">
+	<?php global $post;
+	if ( isset ( $post->ID ) && get_the_post_thumbnail($post->ID) && is_singular() ) : ?>
+
+	<div class="featured-image-background-container">
+		<div class="featured-image-background" style="background-image: url('<?php the_post_thumbnail_url( 'full' ); ?>')">
+		</div>
+		<div class="blue-gradient-background featured-image-cover"></div>
+	</div>
+
+	<?php endif; ?>

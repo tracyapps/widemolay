@@ -11,45 +11,42 @@
 
 // Colors used:
 $white: #fff;
-$offwhite: #F2F2F2;
-$dark:  #414141;
-$gold:	#e1c43b;
 
+$light: #F2F2F2;
+$dark: #202020;
+$dark-blue: #071A33;
+$red: #B42125;
+$yellow: #F4CA1A;
 
-$orange:	#F27143;
-$yellow:	#F2C74D;
-$green:		#85ED3F;
-$light-blue: #B3DFD8;
-$blue:		#478AD4;
-$slate:		#496C85;
-$blue-purple:#7A7CBD;
-$purple: 	#564d95;
+$green: #9fde10;
+$light-red: #ab2626;
+$logo-blue: #232D45;
 
 
 // Define branding
-$primary-color:            	$orange;
-$secondary-color:          	$dark;
-$default-background-color: 	$offwhite;
+$primary-color:            	$dark-blue;
+$secondary-color:          	$yellow;
+$default-background-color: 	$light;
 $default-text-color:       	$dark;
-$default-link-color:       	$blue-purple;
-$default-link-color-hover: 	$purple;
+$default-link-color:       	$red;
+$default-link-color-hover: 	darken( $red, 10 );
 $inverse-background-color: 	$dark;
 $inverse-text-color:       	$white;
-$inverse-link-color:       	$light-blue;
-$inverse-link-color-hover: 	$offwhite;
-$header-background-color: 	rgba( $white, 0.5 );
-$footer-background-color:  	$slate;
-$footer-text-color:			$offwhite;
-$footer-link-color:			$light-blue;
-$footer-link-color-hover: 	$offwhite;
+$inverse-link-color:       	$yellow;
+$inverse-link-color-hover: 	$light;
+$header-background-color: 	$dark-blue;
+$footer-background-color:  	$dark;
+$footer-text-color:			$light;
+$footer-link-color:			$yellow;
+$footer-link-color-hover: 	$light;
 
 // Define elements
 
 // Primary / Default button:
-$button-background-color:       $light-blue;
+$button-background-color:       $light-red;
 $button-background-color-hover: transparent;
-$button-text-color:             $dark;
-$button-text-color-hover:       $dark;
+$button-text-color:             $white;
+$button-text-color-hover:       $red;
 $default-button-padding:        1rem 2rem;
 
 
@@ -90,11 +87,11 @@ $tablet-landscape-up:  $breakpoint-medium;
 //
 // Font Variables
 
-$serif: 'Quattrocento', serif;
-$sans-serif: 'Work Sans', sans-serif;
+$serif: 'soleil', serif;
+$sans-serif: 'soleil', sans-serif;
 
 $header-font: $sans-serif;
-$body-font: $serif;
+$body-font: $sans-serif;
 
 // The font size set on the root html element.
 $base-font-size: 22px;
@@ -107,11 +104,11 @@ $base-line-height: 24px;
 $base-unit: 'rem';
 
 // The font sizes for h1-h6.
-$h1-font-size: $base-font-size * 2.5;
-$h2-font-size: $base-font-size * 2.2;
-$h3-font-size: $base-font-size * 2;
-$h4-font-size: $base-font-size * 1.5;
-$h5-font-size: $base-font-size * 1.3;
+$h1-font-size: $base-font-size * 2.7;
+$h2-font-size: $base-font-size * 2.5;
+$h3-font-size: $base-font-size * 2.2;
+$h4-font-size: $base-font-size * 1.9;
+$h5-font-size: $base-font-size * 1.4;
 $h6-font-size: $base-font-size * 1.1;
 
 

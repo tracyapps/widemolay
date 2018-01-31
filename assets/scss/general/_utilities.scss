@@ -140,24 +140,21 @@
 	background-image: linear-gradient(to top, #505285 0%, #585e92 12%, #65689f 25%, #7474b0 37%, #7e7ebb 50%, #8389c7 62%, #9795d4 75%, #a2a1dc 87%, #b5aee4 100%);
 }
 
-@mixin dark-aqua-gradient {
-	background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-}
 
-@mixin dark-blue-gradient {
-	background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
-}
-
-@mixin medium-blue-gradient {
-	background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
-}
-
-@mixin light-blue-gradient {
-	background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+@mixin blue-gradient {
+	background-image: linear-gradient(-60deg, rgba( 0, 213, 251, 0.9 ) 0%, rgba( 7, 26, 51, 0.9 ) 100%);
 }
 
 @mixin green-gradient {
-	background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+	background-image: linear-gradient(120deg, $green 0%, #d5f419 100%);
+}
+
+@mixin red-gradient {
+	background-image: linear-gradient(-60deg, rgba(244, 92, 17, 0.9) 0%, rgba( $light-red, 0.9 ) 100%);
+}
+
+@mixin light-gradient {
+	background-image: linear-gradient(-60deg, rgba(244, 241, 28, 0.9) 0%, rgba( $yellow, 0.95) 100%);
 }
 
 @mixin orange-gradient {

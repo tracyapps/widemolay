@@ -16,16 +16,12 @@ $columns = 3;
 	<?php for ( $col = 1; $col <= $columns; $col++ ) : 
 
 		$col_background_select = get_sub_field( 'column_' . $col . '_background_select' );
-		$col_background_class = '';
+		$col_background_class = 'plain-background';
 		$col_background_image = '';
 		$show_the_button = get_sub_field( 'column_' . $col . '_show_button_select' );
 
 		if( $col_background_select == 'pattern' ) :
-			$col_background_class = get_sub_field( 'column_' . $col . '_background_pattern' );
-		elseif( $col_background_select == 'image' ) :
-			$col_background_image = ' style="background-image: url(' . esc_url( get_sub_field( 'column_' . $col . '_background_image' ) ) . '); background-size: contain; background-repeat: no-repeat; background-position: right;" ';
-		else :
-			$col_background_class = 'plain-bg';
+			$col_background_class = get_sub_field( 'column_' . $col . '_background_pattern' ) . '-background';
 		endif;
 		?>
 

@@ -1,7 +1,55 @@
-body:not(.home) {
-	#content {
-		//padding-top: 3rem;
+#content {
+	// padding-top: 7vh;
+}
+
+#main {
+	width: 100%;
+}
+
+body:not(.has-featured-image) {
+	#main {
+
+		> section:first-of-type:not(.type-hero),
+		> article:first-of-type {
+			padding-top: 5vh;
+		}
 	}
 }
 
 
+body.has-featured-image {
+	.featured-image-background-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 0;
+		overflow: hidden;
+
+		.featured-image-background {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.featured-image-cover {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			opacity: 0.86;
+		}
+	}
+
+	#content {
+		margin-top: 45vh;
+		position: relative;
+		z-index: 5;
+		background: $default-background-color;
+	}
+}

@@ -3,6 +3,8 @@ footer.site-footer {
 	background: $footer-background-color;
 	padding: 2rem 0;
 	color: $footer-text-color;
+	position: relative;
+	z-index: 5;
 
 	a {
 		color: $footer-link-color;

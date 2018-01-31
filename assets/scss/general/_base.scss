@@ -137,7 +137,7 @@ h3,
 h4,
 h5 {
 	font-family: $header-font;
-	font-weight: 300;
+	font-weight: 800;
 	text-transform: capitalize;
 	margin-bottom: 0.3em;
 }
@@ -198,7 +198,53 @@ h6 {
 
 // ---------------- 04. SVG backgrounds / patterns
 
-.plain-bg {
-	background: $default-background-color;
+.plain-background,
+.none-background {
 	@include default-colors;
+	background: $default-background-color;
+}
+
+.inverse-background {
+	@include inverse-colors;
+	background-color: $inverse-background-color;
+}
+
+.dark-blue-background {
+	@include inverse-colors;
+	background-color: $dark-blue;
+}
+
+.green-background {
+	@include default-colors;
+	background-color: $green;
+}
+
+.yellow-background {
+	@include default-colors;
+	background-color: $yellow;
+}
+
+.red-background {
+	@include inverse-colors;
+	background-color: $light-red;
+}
+
+.blue-gradient-background {
+	@include inverse-colors;
+	@include blue-gradient;
+}
+
+.red-gradient-background {
+	@include inverse-colors;
+	@include red-gradient;
+}
+
+.green-gradient-background {
+	@include default-colors;
+	@include green-gradient;
+}
+
+.light-gradient-background {
+	@include default-colors;
+	@include light-gradient;
 }

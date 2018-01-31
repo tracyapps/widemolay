@@ -30,11 +30,12 @@
 		background-size: cover;
 		background-position: 50% 20%;
 		position: relative;
+		z-index: 0;
 
 		.hero-text-container {
 			font-size: 1.5em;
 			padding: 7vw 1em 1em 1em;
-			margin: 0 1vw 0 60vw;
+			margin: 0 55vw 0 4vw;
 			overflow: hidden;
 
 			p:first-child {
@@ -74,18 +75,6 @@
 
 	}
 
-	&.text-image {
-		.text-side {
-			.padding {
-				float: right;
-
-				@include phone-only {
-					float: none;
-				}
-			}
-		}
-	}
-
 	&.thirds {
 		> div {
 			flex: auto;
@@ -93,9 +82,6 @@
 			&.text-side {
 				width: $golden-large;
 
-				.padding {
-					max-width: 70ch;
-				}
 			}
 			&.image-side {
 				width: calc( 100vw - #{$golden-large} );
@@ -121,9 +107,7 @@
 			}
 
 			.padding {
-				max-width: 45ch;
-				padding-left: 2em;
-				padding-right: 2em;
+				padding: 4em;
 			}
 		}
 		

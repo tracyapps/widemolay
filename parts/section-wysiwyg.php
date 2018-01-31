@@ -5,9 +5,6 @@
 ?>
 
 <div class="container">
-	<div class="padding plain-bg">
-		<?php the_sub_field( 'wysiwyg_content' ); ?>
-	</div>
-
+	<?php the_sub_field( 'wysiwyg_content' ); ?>
 </div>
 
