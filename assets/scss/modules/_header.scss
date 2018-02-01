@@ -310,7 +310,7 @@
 		overflow-y: scroll;
 		top:0;
 		opacity:0;
-		font-size: 4rem;
+		font-size: 3rem;
 
 		> ul {
 			position: relative;
@@ -328,7 +328,7 @@
 					text-align: left;
 					text-decoration:none;
 					color:$dark;
-					font-size: 3rem;
+					font-size: 2.8rem;
 					font-weight: bold;
 					position:relative;
 					cursor:pointer;
@@ -343,7 +343,7 @@
 					background: rgba( $light, 0.05 );
 
 					a {
-						font-size: 2.3rem;
+						font-size: 2rem;
 					}
 
 					ul {
