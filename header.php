@@ -40,15 +40,17 @@
 	</div>
 
 	<nav class="main-navigation">
-		<div class="mobile-menu-toggle"><a href="#menu-main-navigation" id="toggle">Menu</a></div>
 		<?php start_top_nav(); ?>
 	</nav>
 
 
 </header> <!-- / .site-header -->
-
-<nav class="main-navigation-sticky">
-	<div class="mobile-menu-toggle"><a href="#menu-main-navigation" id="toggle">Menu</a></div>
+<div class="mobile-nav-button">
+	<div class="mobile-nav-button__line"></div>
+	<div class="mobile-nav-button__line"></div>
+	<div class="mobile-nav-button__line"></div>
+</div>
+<nav class="main-navigation-sticky main-navigation mobile-menu">
 	<?php start_top_nav(); ?>
 </nav>
 
