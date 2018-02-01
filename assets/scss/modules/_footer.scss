@@ -94,6 +94,15 @@ footer.site-footer {
 			a {
 				text-decoration: none;
 			}
+
+			svg.icon {
+				opacity: 0.67;
+				transition: all $button-transition-speed ease-in-out;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
 	}
 

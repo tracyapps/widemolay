@@ -32,7 +32,33 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header" role="banner">
-	
+	<nav class="utility-navigation">
+		<ul>
+			<li class="icon-mail">
+				<a href="/contact/">
+					<span>
+						<svg class="icon-mail-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
+						</svg>
+						<text>Contact us</text>
+					</span>
+				</a>
+			</li>
+			<li class="icon-search">
+				<div class="show-hide-search-button">
+					<span>
+						<svg class="icon-search-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
+						</svg>
+						<text>Search</text>
+					</span>
+				</div>
+			</li>
+			<li class="search-form-area" id="search-form">
+				<?php get_search_form(); ?>
+			</li>
+		</ul>
+	</nav>
 	<div class="header-content">
 		
 		<div class="logo">

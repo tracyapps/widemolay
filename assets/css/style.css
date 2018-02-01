@@ -149,6 +149,18 @@ a.no-style {
   color: #202020;
   text-decoration: none; }
 
+svg.icon {
+  max-width: 32px;
+  max-height: 32px; }
+  svg.icon + text {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden; }
+
 h1,
 h2,
 h3,
@@ -567,6 +579,70 @@ input[type="submit"] {
   margin-top: -7vh;
   margin-bottom: -3vh;
   z-index: 1000; }
+  .site-header nav.utility-navigation {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden; }
+  @media (min-width: 900px) {
+    .site-header nav.utility-navigation {
+      transform: rotate(2.1deg);
+      position: fixed;
+      width: 100%;
+      height: 30px;
+      background: #010810;
+      top: 7vh;
+      left: 0;
+      right: 0;
+      z-index: 190000; }
+      .site-header nav.utility-navigation ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+      .site-header nav.utility-navigation li {
+        margin: 0;
+        padding: 0 3px 2px 3px;
+        text-align: center; }
+      .site-header nav.utility-navigation svg.icon {
+        fill: rgba(244, 202, 26, 0.8);
+        max-height: 19px;
+        transition: all 400ms ease-in-out;
+        margin: 0 auto;
+        cursor: pointer; }
+        .site-header nav.utility-navigation svg.icon:hover {
+          fill: rgba(180, 33, 37, 0.9); }
+      .site-header nav.utility-navigation .search-form-area {
+        font-size: 80%;
+        width: 0;
+        overflow: hidden;
+        transition: all 400ms ease-in-out; }
+        .site-header nav.utility-navigation .search-form-area input[type="search"],
+        .site-header nav.utility-navigation .search-form-area input[type="submit"] {
+          font-size: 12px;
+          opacity: 0;
+          padding: 3px;
+          transition: all 400ms ease-in-out; }
+        .site-header nav.utility-navigation .search-form-area input[type="search"] {
+          background: rgba(242, 242, 242, 0.1);
+          color: #F2F2F2;
+          width: 0; }
+        .site-header nav.utility-navigation .search-form-area.show-search-form {
+          width: 50%; }
+          .site-header nav.utility-navigation .search-form-area.show-search-form input[type="search"] {
+            opacity: 1;
+            font-size: 12px;
+            padding: 3px;
+            width: 80%;
+            background: rgba(242, 242, 242, 0.1);
+            color: #F2F2F2; }
+          .site-header nav.utility-navigation .search-form-area.show-search-form input[type="submit"] {
+            opacity: 1;
+            font-size: 12px;
+            padding: 5px 4px; } }
   .site-header .header-content {
     transform: rotate(2.1deg);
     transition: all 1500ms ease-in-out; }
@@ -906,6 +982,11 @@ footer.site-footer {
         padding: 1rem; }
       footer.site-footer .social-links li a {
         text-decoration: none; }
+      footer.site-footer .social-links li svg.icon {
+        opacity: 0.67;
+        transition: all 400ms ease-in-out; }
+        footer.site-footer .social-links li svg.icon:hover {
+          opacity: 1; }
   footer.site-footer .container p {
     padding: 0; }
 
