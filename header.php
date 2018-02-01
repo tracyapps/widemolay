@@ -32,6 +32,7 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header" role="banner">
+	
 	<div class="header-content">
 		
 		<div class="logo">

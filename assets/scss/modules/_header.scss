@@ -157,6 +157,9 @@
 }
 
 .main-navigation-sticky {
+	@include tablet-up {
+		background-color: $yellow;
+	}
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -164,6 +167,11 @@
 	z-index: 100;
 	border-top: 0;
 	display: none;
+	font-size: 85%;
+
+	.logged-in.admin-bar & {
+		top: 32px;
+	}
 
 	&.show {
 		display: inline-block;

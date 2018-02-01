@@ -42,14 +42,11 @@
 				margin-top: 0;
 			}
 
-			@include tablet-down {
-				background: rgba( $default-background-color, 0.8 );
-			}
 		}
 
 		@include phone-only {
 			min-height: 60vh;
-			background-size: 200% auto;
+			background-size: auto 100%;
 			background-repeat: no-repeat;
 
 			.hero-text-container {
@@ -82,9 +79,17 @@
 			&.text-side {
 				width: $golden-large;
 
+				@include phone-only {
+					width: 100%;
+				}
+
 			}
 			&.image-side {
 				width: calc( 100vw - #{$golden-large} );
+
+				@include phone-only {
+					width: 100%;
+				}
 			}
 		}
 	}
