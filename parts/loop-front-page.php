@@ -1,18 +1,24 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
-	<header class="article-header">
-		<h1 class="page-title"><?php the_title(); ?></h1>
-	</header> <!-- end article header -->
+	<section class="homepage-hero">
+		<div class="hero-content">
+			<?php if ( get_field( 'hero_text_line_one' ) ) :
+			echo '<h1>' . the_field( 'hero_text_line_one' ) . '</h1>';
+			endif;
 
-	<section class="entry-content" itemprop="articleBody">
-		<?php the_content(); ?>
-		<?php wp_link_pages(); ?>
-	</section> <!-- end article section -->
+			if ( get_field( 'hero_text_line_two' ) ) :
+				echo '<h2>' . the_field( 'hero_text_line_two' ) . '</h2>';
+			endif;
 
-	<footer class="article-footer">
+			if ( get_field( 'hero_text_paragraph' ) ) :
+				echo '<div class="hero-text">' . the_field( 'hero_text_paragraph' ) . '</div>';
+			endif;  ?>
 
-	</footer> <!-- end article footer -->
 
-	<?php comments_template(); ?>
+		</div>
+	</section>
+
+	<?php get_template_part( 'parts/sections' ); ?>
+
 
 </article> <!-- end article -->

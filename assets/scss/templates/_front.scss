@@ -1,0 +1,9 @@
+.home {
+	section.homepage-hero {
+		min-height: 59vh;
+		@include inverse-colors;
+		@include blue-gradient;
+		padding: 12vh 2vw 5vh 2vw;
+		margin-top: -7vh;
+	}
+}

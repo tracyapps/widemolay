@@ -1361,6 +1361,26 @@ footer.site-footer {
       .page-children-grid .child-page-box .child-page-link:hover {
         transform: scale(1.1); }
 
+.home section.homepage-hero {
+  min-height: 59vh;
+  color: #fff;
+  background-image: linear-gradient(-60deg, rgba(0, 213, 251, 0.9) 0%, rgba(7, 26, 51, 0.9) 100%);
+  padding: 12vh 2vw 5vh 2vw;
+  margin-top: -7vh; }
+  .home section.homepage-hero a,
+  .home section.homepage-hero a:visited {
+    color: #F4CA1A; }
+    .home section.homepage-hero a:hover, .home section.homepage-hero a:focus, .home section.homepage-hero a:active,
+    .home section.homepage-hero a:visited:hover,
+    .home section.homepage-hero a:visited:focus,
+    .home section.homepage-hero a:visited:active {
+      color: #F2F2F2; }
+    .home section.homepage-hero a.button:hover,
+    .home section.homepage-hero a:visited.button:hover {
+      color: #fff !important; }
+  .home section.homepage-hero svg {
+    fill: #fff !important; }
+
 header.article-header .byline {
   padding: 0 0 6rem 0; }
 

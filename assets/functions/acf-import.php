@@ -362,7 +362,9 @@ if( function_exists('acf_add_local_field_group') ):
 		'description' => '',
 	));
 
+
 	//***************************************   PAGE SECTIONS
+
 	acf_add_local_field_group(array (
 		'key' => 'group_58ec5338d51db',
 		'title' => 'Page Sections',
@@ -1868,7 +1870,7 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 		),
 		'location' => $where_sections_are_active,
-		'menu_order' => 1,
+		'menu_order' => 2,
 		'position' => 'acf_after_title',
 		'style' => 'default',
 		'label_placement' => 'top',
@@ -1883,6 +1885,237 @@ if( function_exists('acf_add_local_field_group') ):
 		'active' => 1,
 		'description' => '',
 	));
+
+
+	//***************************************   HOME PAGE HERO
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5a7494eec1220',
+		'title' => 'Home page hero section',
+		'fields' => array(
+			array(
+				'key' => 'field_5a749505da8a0',
+				'label' => 'Hero text, line 1: Title',
+				'name' => 'hero_text_line_one',
+				'type' => 'text',
+				'instructions' => 'Largest text line. Keep this short.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5a7495d4da8a1',
+				'label' => 'Hero text, line 2: Subtitle',
+				'name' => 'hero_text_line_two',
+				'type' => 'text',
+				'instructions' => 'Line of text under the title. Still a large text size, so keep this fairly short as well.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_5a749635da8a2',
+				'label' => 'Hero paragraph text',
+				'name' => 'hero_text_paragraph',
+				'type' => 'wysiwyg',
+				'instructions' => 'This is smaller text that will appear below the title and subtitle. There\'s a bit more space for text here, however, try to keep this to around 2-4 sentences long.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '60',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'tabs' => 'all',
+				'toolbar' => 'basic',
+				'media_upload' => 1,
+				'delay' => 1,
+			),
+			array(
+				'key' => 'field_5a7496e8da8a3',
+				'label' => 'Hero button',
+				'name' => 'hero_button',
+				'type' => 'group',
+				'instructions' => 'A call to action button in the hero section',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '40',
+					'class' => '',
+					'id' => '',
+				),
+				'layout' => 'block',
+				'sub_fields' => array(
+					array(
+						'key' => 'field_5a749732da8a4',
+						'label' => 'Button text',
+						'name' => 'button_text',
+						'type' => 'text',
+						'instructions' => 'What the button will say',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '100',
+							'class' => '',
+							'id' => '',
+						),
+						'default_value' => '',
+						'placeholder' => '',
+						'prepend' => '',
+						'append' => '',
+						'maxlength' => '',
+					),
+					array(
+						'key' => 'field_5a749761da8a5',
+						'label' => 'Button link',
+						'name' => 'button_link',
+						'type' => 'link',
+						'instructions' => '',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'wrapper' => array(
+							'width' => '100',
+							'class' => '',
+							'id' => '',
+						),
+						'return_format' => 'url',
+					),
+				),
+			),
+			array(
+				'key' => 'field_5a7497e6b40ea',
+				'label' => 'Hero background',
+				'name' => 'hero_background',
+				'type' => 'radio',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '30',
+					'class' => '',
+					'id' => '',
+				),
+				'choices' => array(
+					'none' => 'None / just color',
+					'image' => 'Image',
+					'video' => 'Video',
+				),
+				'allow_null' => 0,
+				'other_choice' => 0,
+				'save_other_choice' => 0,
+				'default_value' => 'none',
+				'layout' => 'vertical',
+				'return_format' => 'value',
+			),
+			array(
+				'key' => 'field_5a749846b40eb',
+				'label' => 'Hero background image',
+				'name' => 'hero_background_image',
+				'type' => 'image',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5a7497e6b40ea',
+							'operator' => '==',
+							'value' => 'image',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '60',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'url',
+				'preview_size' => 'medium',
+				'library' => 'all',
+				'min_width' => '',
+				'min_height' => '',
+				'min_size' => '',
+				'max_width' => '',
+				'max_height' => '',
+				'max_size' => '',
+				'mime_types' => '',
+			),
+			array(
+				'key' => 'field_5a74987bb40ec',
+				'label' => 'Hero background video',
+				'name' => 'hero_background_video',
+				'type' => 'file',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_5a7497e6b40ea',
+							'operator' => '==',
+							'value' => 'video',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '60',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'array',
+				'library' => 'all',
+				'min_size' => '',
+				'max_size' => '',
+				'mime_types' => 'mp4, mov',
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'post_type',
+					'operator' => '==',
+					'value' => 'page',
+				),
+				array(
+					'param' => 'page_type',
+					'operator' => '==',
+					'value' => 'front_page',
+				),
+			),
+		),
+		'menu_order' => 1,
+		'position' => 'acf_after_title',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => array(
+			0 => 'the_content',
+			1 => 'excerpt',
+			2 => 'custom_fields',
+			3 => 'discussion',
+			4 => 'send-trackbacks',
+		),
+		'active' => 1,
+		'description' => '',
+	));
+
 
 	//***************************************   PERSON CONTACT
 
