@@ -948,15 +948,12 @@ nav.utility-navigation {
             transition: all 400ms ease-in-out;
             font-size: 16px;
             padding: 0;
-            opacity: 0; }
+            opacity: 0;
+            margin: 0; }
           .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form {
             width: 80%; }
             .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="search"] {
-              width: 65%;
-              padding: 0.5rem;
-              opacity: 1; }
-            .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="submit"] {
-              width: auto;
+              width: 95%;
               padding: 0.5rem;
               opacity: 1; } }
 

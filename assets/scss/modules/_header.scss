@@ -556,22 +556,18 @@ nav.utility-navigation {
 						font-size: 16px;
 						padding: 0;
 						opacity: 0;
+						margin: 0;
 					}
 
 					&.show-search-form {
 						width: 80%;
 
 						input[type="search"] {
-							width: 65%;
+							width: 95%;
 							padding: 0.5rem;
 							opacity: 1;
 						}
 
-						input[type="submit"] {
-							width: auto;
-							padding: 0.5rem;
-							opacity: 1;
-						}
 
 					}
 				}
