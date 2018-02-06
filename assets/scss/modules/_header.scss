@@ -555,6 +555,7 @@ nav.utility-navigation {
 						transition: all $button-transition-speed ease-in-out;
 						font-size: 16px;
 						padding: 0;
+						height: 0;
 						opacity: 0;
 						margin: 0;
 					}
@@ -568,7 +569,9 @@ nav.utility-navigation {
 							opacity: 1;
 						}
 
-
+						input[type="submit"] {
+							display: none;
+						}
 					}
 				}
 			}
