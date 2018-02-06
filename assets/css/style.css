@@ -956,7 +956,8 @@ nav.utility-navigation {
             .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="search"] {
               width: 95%;
               padding: 0.5rem;
-              opacity: 1; }
+              opacity: 1;
+              height: auto; }
             .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="submit"] {
               display: none; } }
 
