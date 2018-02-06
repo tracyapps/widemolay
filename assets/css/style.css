@@ -955,9 +955,10 @@ nav.utility-navigation {
             width: 80%; }
             .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="search"] {
               width: 95%;
-              padding: 0.5rem;
+              padding: 4px;
               opacity: 1;
-              height: auto; }
+              height: auto;
+              min-height: 24px; }
             .mobile-only-utility-navigation nav.utility-navigation li.mobile-search-form-area.show-search-form input[type="submit"] {
               display: none; } }
 

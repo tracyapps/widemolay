@@ -565,9 +565,10 @@ nav.utility-navigation {
 
 						input[type="search"] {
 							width: 95%;
-							padding: 0.5rem;
+							padding: 4px;
 							opacity: 1;
 							height: auto;
+							min-height: 24px;
 						}
 
 						input[type="submit"] {
