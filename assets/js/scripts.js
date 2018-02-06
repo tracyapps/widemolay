@@ -95,6 +95,12 @@ jQuery(document).ready( function($) {
 		$('.search-form-area').toggleClass('show-search-form');
 		return false;
 	})
+
+	$('.show-hide-mobile-search-button').on('click', function () {
+
+		$('.mobile-search-form-area').toggleClass('show-search-form');
+		return false;
+	})
 });
 
 /**

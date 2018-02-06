@@ -18,91 +18,6 @@
 	margin-bottom: -3vh;
 	z-index: 1000;
 
-	nav.utility-navigation {
-		position: absolute;
-		width: 0;
-		height: 0;
-		overflow: hidden;
-	}
-	@include tablet-up {
-		nav.utility-navigation {
-			transform: rotate(2.1deg);
-			position: fixed;
-			width: 100%;
-			height: 30px;
-			background: saturate( darken( $dark-blue, 8 ), 10 );
-			top: 7vh;
-			left: 0;
-			right: 0;
-			z-index: 190000;
-
-			ul {
-				margin: 0;
-				padding: 0;
-				list-style: none;
-				display: flex;
-				justify-content: flex-end;
-			}
-			li {
-
-				margin: 0;
-				padding: 0 3px 2px 3px;
-				text-align: center;
-			}
-
-			svg.icon {
-				fill: rgba( $yellow, 0.8 );
-				max-height: 19px;
-				transition: all $button-transition-speed ease-in-out;
-				margin: 0 auto;
-				cursor: pointer;
-
-				&:hover {
-					fill: rgba( $red, 0.9 );
-				}
-			}
-
-			.search-form-area {
-				font-size: 80%;
-				width: 0;
-				overflow: hidden;
-				transition: all $button-transition-speed ease-in-out;
-
-				input[type="search"],
-				input[type="submit"] {
-					font-size: 12px;
-					opacity: 0;
-					padding: 3px;
-					transition: all $button-transition-speed ease-in-out;
-				}
-				input[type="search"] {
-					background: rgba( $light, 0.1 );
-					color: $light;
-					width: 0;
-				}
-				&.show-search-form {
-					width: 50%;
-
-					input[type="search"] {
-						opacity: 1;
-						font-size: 12px;
-						padding: 3px;
-						width: 80%;
-						background: rgba( $light, 0.1 );
-						color: $light;
-					}
-					input[type="submit"] {
-						opacity: 1;
-						font-size: 12px;
-						padding: 5px 4px;
-					}
-				}
-
-			}
-
-		}
-	}
-
 
 	.header-content {
 		transform: rotate(2.1deg);
@@ -255,8 +170,17 @@
 	display: none;
 	font-size: 85%;
 
+	@include tablet-up {
+		top: 30px;
+	}
+
 	.logged-in.admin-bar & {
 		top: 32px;
+
+		@include tablet-up {
+			top: 62px;
+		}
+
 	}
 
 	&.show {
@@ -334,6 +258,123 @@
 	}
 
 
+}
+
+nav.utility-navigation {
+	position: absolute;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+@include tablet-up {
+	nav.utility-navigation {
+		position: fixed;
+		width: 100%;
+		height: 30px;
+		background: saturate( darken( $dark-blue, 8 ), 10 );
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 190000;
+		border-top: 1px solid saturate( darken( $dark-blue, 8 ), 10 );
+		overflow: visible;
+		transition: all $button-transition-speed ease-in-out;
+
+		.logged-in.admin-bar & {
+			top: 32px;
+		}
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+			justify-content: flex-end;
+		}
+		li {
+
+			margin: 0;
+			padding: 0 5px 2px 5px;
+			text-align: center;
+			position: relative;
+		}
+
+		svg.icon {
+			fill: rgba( $yellow, 0.8 );
+			max-height: 19px;
+			transition: all $button-transition-speed ease-in-out;
+			margin: 0 auto;
+			cursor: pointer;
+			overflow: visible;
+			position: relative;
+
+			text.tooltip {
+				display: block !important;
+				opacity: 0 !important;
+				background: $dark;
+				fill: rgba( $light, 0.7 ) !important;
+				transition: all $button-transition-speed ease-in-out;
+				z-index: 1900000;
+				font-family: $sans-serif !important;
+				font-size: 1.2rem !important;
+				text-anchor: middle !important;
+			}
+
+			&:hover {
+				fill: rgba( $red, 0.9 );
+
+				text.tooltip {
+					opacity: 1 !important;
+
+				}
+			}
+		}
+
+		.search-form-area {
+			font-size: 80%;
+			width: 0;
+			overflow: hidden;
+			transition: all $button-transition-speed ease-in-out;
+
+			input[type="search"],
+			input[type="submit"] {
+				font-size: 12px;
+				opacity: 0;
+				padding: 3px;
+				transition: all $button-transition-speed ease-in-out;
+			}
+			input[type="search"] {
+				background: rgba( $light, 0.1 );
+				color: $light;
+				width: 0;
+			}
+			&.show-search-form {
+				width: 50%;
+
+				input[type="search"] {
+					opacity: 1;
+					font-size: 12px;
+					padding: 3px;
+					width: 80%;
+					background: rgba( $light, 0.1 );
+					color: $light;
+				}
+				input[type="submit"] {
+					opacity: 1;
+					font-size: 12px;
+					padding: 5px 4px;
+				}
+			}
+
+		}
+	}
+
+	.mobile-only-utility-navigation {
+		display: none;
+		height: 0;
+		width: 0;
+		opacity: 0;
+	}
 }
 
 @include tablet-down {
@@ -476,5 +517,66 @@
 	.mobile-menu--open {
 		right:0;
 		opacity:1;
+	}
+
+	.mobile-only-utility-navigation {
+		display: block;
+
+		nav.utility-navigation {
+			height: auto;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+
+			a,
+			span {
+				display: block;
+				padding: 0.2em 0;
+			}
+
+			ul {
+				display: flex;
+				align-items: center;
+			}
+
+			li {
+				flex: 1;
+
+
+				&.mobile-search-form-area {
+					width: 0;
+					overflow: hidden;
+					flex: none;
+
+					input {
+						width: 0;
+						transition: all $button-transition-speed ease-in-out;
+						font-size: 16px;
+						padding: 0;
+						opacity: 0;
+					}
+
+					&.show-search-form {
+						width: 80%;
+
+						input[type="search"] {
+							width: 65%;
+							padding: 0.5rem;
+							opacity: 1;
+						}
+
+						input[type="submit"] {
+							width: auto;
+							padding: 0.5rem;
+							opacity: 1;
+						}
+
+					}
+				}
+			}
+
+		}
 	}
 }

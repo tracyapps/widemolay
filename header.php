@@ -32,33 +32,7 @@
 <body <?php body_class(); ?>>
 
 <header class="site-header" role="banner">
-	<nav class="utility-navigation">
-		<ul>
-			<li class="icon-mail">
-				<a href="/contact/">
-					<span>
-						<svg class="icon-mail-dims icon">
-							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
-						</svg>
-						<text>Contact us</text>
-					</span>
-				</a>
-			</li>
-			<li class="icon-search">
-				<div class="show-hide-search-button">
-					<span>
-						<svg class="icon-search-dims icon">
-							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
-						</svg>
-						<text>Search</text>
-					</span>
-				</div>
-			</li>
-			<li class="search-form-area" id="search-form">
-				<?php get_search_form(); ?>
-			</li>
-		</ul>
-	</nav>
+
 	<div class="header-content">
 		
 		<div class="logo">
@@ -72,6 +46,35 @@
 
 
 </header> <!-- / .site-header -->
+<nav class="utility-navigation">
+	<ul>
+		<li class="icon-mail">
+			<a href="/contact/">
+					<span>
+						<svg class="icon-mail-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
+							<text x="15" y="35" class="tooltip">Contact us</text>
+						</svg>
+
+					</span>
+			</a>
+		</li>
+		<li class="icon-search">
+			<div class="show-hide-search-button">
+					<span>
+						<svg class="icon-search-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
+							<text x="15" y="35" class="tooltip">Search</text>
+						</svg>
+
+					</span>
+			</div>
+		</li>
+		<li class="search-form-area" id="search-form">
+			<?php get_search_form(); ?>
+		</li>
+	</ul>
+</nav>
 <div class="mobile-nav-button">
 	<div class="mobile-nav-button__line"></div>
 	<div class="mobile-nav-button__line"></div>
@@ -79,6 +82,36 @@
 </div>
 <nav class="main-navigation-sticky main-navigation mobile-menu">
 	<?php start_top_nav(); ?>
+	<div class="mobile-only-utility-navigation">
+		<nav class="utility-navigation">
+			<ul>
+				<li class="icon-mail">
+					<a href="/contact/">
+					<span>
+						<svg class="icon-mail-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
+
+						</svg>
+
+					</span>
+					</a>
+				</li>
+				<li class="icon-search">
+					<div class="show-hide-mobile-search-button">
+					<span>
+						<svg class="icon-search-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
+						</svg>
+
+					</span>
+					</div>
+				</li>
+				<li class="mobile-search-form-area" id="mobile-search-form">
+					<?php get_search_form(); ?>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </nav>
 
 <div class="site-content">
