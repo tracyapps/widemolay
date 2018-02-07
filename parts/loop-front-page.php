@@ -50,16 +50,23 @@
 		endif; // end if slideshow choice ?>
 		<div class="hero-content">
 			<?php if ( get_field( 'hero_text_line_one' ) ) :
-			echo '<h1>' . the_field( 'hero_text_line_one' ) . '</h1>';
+			echo '<h1>' . esc_html( get_field( 'hero_text_line_one' ) ) . '</h1>';
 			endif;
 
 			if ( get_field( 'hero_text_line_two' ) ) :
-				echo '<h2>' . the_field( 'hero_text_line_two' ) . '</h2>';
+				echo '<h2>' . esc_html( get_field( 'hero_text_line_two' ) ) . '</h2>';
 			endif;
 
 			if ( get_field( 'hero_text_paragraph' ) ) :
-				echo '<div class="hero-text">' . the_field( 'hero_text_paragraph' ) . '</div>';
-			endif;  ?>
+				echo '<div class="hero-text">' . get_field( 'hero_text_paragraph' ) . '</div>';
+			endif;
+
+			$cta_button = get_field( 'hero_button' );
+
+			if ( $cta_button[button_text] != '' ) :
+				echo '<p class="centered-text"><a href="' . esc_url( $cta_button[button_link] ) . '" class="button">' . esc_html( $cta_button[button_text] ) . '</a></p>';
+			endif;
+			?>
 
 
 		</div>

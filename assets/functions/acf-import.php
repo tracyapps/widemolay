@@ -1970,7 +1970,7 @@ if( function_exists('acf_add_local_field_group') ):
 						'label' => 'Button text',
 						'name' => 'button_text',
 						'type' => 'text',
-						'instructions' => 'What the button will say',
+						'instructions' => 'What the button will say. Leave blank to remove the button.',
 						'required' => 0,
 						'conditional_logic' => 0,
 						'wrapper' => array(
