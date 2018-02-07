@@ -48,26 +48,46 @@
 </header> <!-- / .site-header -->
 <nav class="utility-navigation">
 	<ul>
+		<li class="icon-location">
+			<a href="/location/">
+				<span>
+					<svg class="icon-location-dims icon">
+						<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#location'></use>
+						<text x="15" y="35" class="tooltip">Chapter Locator</text>
+					</svg>
+				</span>
+			</a>
+		</li>
+		<li class="icon-calendar">
+			<a href="/calendar/">
+				<span>
+					<svg class="icon-calendar-dims icon">
+						<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#calendar'></use>
+						<text x="15" y="35" class="tooltip">Calendar</text>
+					</svg>
+				</span>
+			</a>
+		</li>
 		<li class="icon-mail">
 			<a href="/contact/">
-					<span>
-						<svg class="icon-mail-dims icon">
-							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
-							<text x="15" y="35" class="tooltip">Contact us</text>
-						</svg>
+				<span>
+					<svg class="icon-mail-dims icon">
+						<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
+						<text x="15" y="35" class="tooltip">Contact us</text>
+					</svg>
 
-					</span>
+				</span>
 			</a>
 		</li>
 		<li class="icon-search">
 			<div class="show-hide-search-button">
-					<span>
-						<svg class="icon-search-dims icon">
-							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
-							<text x="15" y="35" class="tooltip">Search</text>
-						</svg>
+				<span>
+					<svg class="icon-search-dims icon">
+						<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
+						<text x="15" y="35" class="tooltip">Search</text>
+					</svg>
 
-					</span>
+				</span>
 			</div>
 		</li>
 		<li class="search-form-area" id="search-form">
@@ -85,14 +105,21 @@
 	<div class="mobile-only-utility-navigation">
 		<nav class="utility-navigation">
 			<ul>
+				<li class="icon-calendar">
+					<a href="/calendar/">
+					<span>
+						<svg class="icon-calendar-dims icon">
+							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#calendar'></use>
+						</svg>
+					</span>
+					</a>
+				</li>
 				<li class="icon-mail">
 					<a href="/contact/">
 					<span>
 						<svg class="icon-mail-dims icon">
 							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#mail'></use>
-
 						</svg>
-
 					</span>
 					</a>
 				</li>
@@ -102,7 +129,6 @@
 						<svg class="icon-search-dims icon">
 							<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#search'></use>
 						</svg>
-
 					</span>
 					</div>
 				</li>

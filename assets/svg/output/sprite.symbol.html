@@ -19,6 +19,7 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style type="text/css">
+	.icon-calendar-dims { width: 100px; height: 100px; }
 	.icon-email-dims { width: 100px; height: 100px; }
 	.icon-etsy-dims { width: 32px; height: 32px; }
 	.icon-facebook-dims { width: 32px; height: 32px; }
@@ -59,6 +60,7 @@ for further details on how to create this embeddable sprite variant.
 -->
 
 <svg width="0" height="0" style="position:absolute">
+		<symbol viewBox="0 0 100 100" id="calendar" xmlns="http://www.w3.org/2000/svg"><path d="M9 13c-2.18 0-4 1.82-4 4v66c0 2.18 1.82 4 4 4h82c2.18 0 4-1.82 4-4V17c0-2.18-1.82-4-4-4zm0 4h82v16H9zm18 4c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm46 0c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zM9 37h82v46H9zm11 7v14h12V44zm16 0v14h12V44zm16 0v14h12V44zm16 0v14h12V44zM20 62v14h12V62zm16 0v14h12V62zm16 0v14h12V62z"/></symbol>
 		<symbol viewBox="0 0 100 100" id="email" xmlns="http://www.w3.org/2000/svg"><path d="M14 21c-4.398 0-8 3.602-8 8v42c0 4.398 3.602 8 8 8h72c4.398 0 8-3.602 8-8V29c0-4.398-3.602-8-8-8zm0 4h72c2.25 0 4 1.75 4 4v42c0 2.25-1.75 4-4 4H14c-2.25 0-4-1.75-4-4V29c0-2.25 1.75-4 4-4zm4.625 7.969a2 2 0 0 0-1.219 3.5l15.25 13.78-15.219 13.22c-.406.347-.652.84-.695 1.37a2.005 2.005 0 0 0 1.863 2.148 1.99 1.99 0 0 0 1.457-.487l15.594-13.562 8.719 7.875c3.168 2.86 8.02 2.887 11.188.031l8.75-7.906L79.938 66.5a2.007 2.007 0 0 0 3.32-1.66 2.012 2.012 0 0 0-.695-1.371l-15.25-13.22 15.28-13.78a2.002 2.002 0 1 0-2.687-2.969l-27.03 24.344c-1.696 1.527-4.122 1.527-5.813 0L20.093 33.5a2.014 2.014 0 0 0-1.468-.531z"/></symbol>
 		<symbol viewBox="0 0 32 32" id="etsy" xmlns="http://www.w3.org/2000/svg"><title>etsy</title><path fill="#f45800" d="M11.456 3.26c0-.434.044-.694.784-.694h9.956c1.74 0 2.696 1.48 3.39 4.26l.566 2.22h1.696C28.152 2.74 28.414 0 28.414 0s-4.26.48-6.784.48H8.89L2.07.26v1.826l2.3.436c1.61.32 2 .66 2.132 2.14 0 0 .14 4.36.14 11.52 0 7.18-.12 11.48-.12 11.48 0 1.3-.52 1.78-2.12 2.1l-2.3.44v1.8l6.84-.22h11.4c2.58 0 8.52.22 8.52.22.14-1.56 1-8.64 1.14-9.42h-1.6l-1.7 3.88c-1.34 3.04-3.3 3.26-5.48 3.26H14.68c-2.174 0-3.22-.86-3.22-2.74V17.06s4.828 0 6.394.13c1.22.086 1.956.434 2.348 2.13l.52 2.26h1.88l-.12-5.696.26-5.74h-1.86l-.6 2.52c-.38 1.656-.64 1.96-2.34 2.134-2.22.22-6.42.18-6.42.18V3.26z"/></symbol>
 		<symbol viewBox="0 0 32 32" id="facebook" xmlns="http://www.w3.org/2000/svg"><title>facebook</title><path fill="#3b5998" d="M30.234 0H1.766C.79 0 0 .79 0 1.766v28.468C0 31.21.79 32 1.766 32h15.326V19.608H12.92V14.78h4.172v-3.566c0-4.132 2.524-6.38 6.212-6.38 1.766 0 3.284.128 3.726.188v4.32h-2.56c-2 0-2.39.96-2.39 2.36v3.08h4.78l-.62 4.84h-4.16V32h8.154C31.21 32 32 31.21 32 30.234V1.766C32 .79 31.21 0 30.234 0z"/></symbol>
@@ -106,6 +108,17 @@ embedded above. They may be styled via CSS.
 			<h3>A) Inline SVG with embedded sprite</h3>
 			<ul>
 
+				<li title="calendar">
+					<div class="icon-box">
+						
+						<!-- calendar -->
+						<svg class="icon-calendar-dims">
+							<use xlink:href="#calendar"></use>
+						</svg>
+						
+					</div>
+					<h2>calendar</h2>
+				</li>
 				<li title="email">
 					<div class="icon-box">
 						
@@ -325,6 +338,17 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 			<h3>B) Inline SVG with external sprite (IE 9-11 with polyfill only)</h3>
 			<ul>
 				
+				<li title="calendar">
+					<div class="icon-box">
+						
+						<!-- calendar -->
+						<svg class="icon-calendar-dims">
+							<use xlink:href="icons.svg#calendar"></use>
+						</svg>
+						
+					</div>
+					<h2>calendar</h2>
+				</li>
 				<li title="email">
 					<div class="icon-box">
 						
@@ -531,7 +555,7 @@ SVG sprite. They may be styled via CSS. (IE 9-11 with polyfill only)
 
 		</section>
 		<footer>
-			<p>Generated at Thu, 01 Feb 2018 22:04:01 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+			<p>Generated at Wed, 07 Feb 2018 20:21:53 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
 		</footer>
 	</body>
 </html>
