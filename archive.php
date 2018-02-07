@@ -15,7 +15,7 @@
 					echo '<secton class="archive-grid blog-grid">';
 					while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'parts/loop', 'blog-grid' ); ?>
+						<?php get_template_part( 'parts/loop', 'archive-grid' ); ?>
 
 
 				<?php endwhile; ?>

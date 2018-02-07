@@ -169,7 +169,7 @@ h5 {
   font-family: "soleil", sans-serif;
   font-weight: 800;
   text-transform: capitalize;
-  margin-bottom: 0.3em; }
+  margin-bottom: 0.2em; }
 
 h1 {
   font-size: 59.4px; }
@@ -1469,8 +1469,36 @@ footer.site-footer {
     height: 59vh;
     z-index: -1; }
 
+body.has-featured-image.search-results #content {
+  margin-top: 0; }
+
+article.archive {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2rem;
+  min-height: 15rem; }
+  article.archive > section {
+    -ms-flex: auto;
+    flex: auto; }
+    article.archive > section.featured-image {
+      width: 25%;
+      background-size: cover;
+      background-position: center center; }
+      article.archive > section.featured-image a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0.9; }
+    article.archive > section.archive-content-container {
+      width: 75%;
+      padding: 1rem 0 1rem 2%; }
+      article.archive > section.archive-content-container h3 {
+        margin-top: 0;
+        font-size: 3rem; }
+
 header.article-header .byline {
-  padding: 0 0 6rem 0; }
+  padding: 0 0 1rem 0;
+  font-size: 80%; }
 
 #respond h3 {
   font-size: 3rem; }

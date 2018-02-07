@@ -26,7 +26,9 @@
 				?>
 			</video>
 		</div>
-		<?php endif; ?>
+		<?php else ( $hero_background_choice == 'slideshow' ) :
+		
+		endif; ?>
 		<div class="hero-content">
 			<?php if ( get_field( 'hero_text_line_one' ) ) :
 			echo '<h1>' . the_field( 'hero_text_line_one' ) . '</h1>';
