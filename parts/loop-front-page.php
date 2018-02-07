@@ -26,9 +26,28 @@
 				?>
 			</video>
 		</div>
-		<?php else ( $hero_background_choice == 'slideshow' ) :
-		
-		endif; ?>
+		<?php elseif ( $hero_background_choice == 'slideshow' ) :
+		if( have_rows( 'photo_slideshow' ) ) : while( have_rows( 'photo_slideshow' ) ) : the_row();
+			?>
+		<div class="crossfade slideshow-container">
+			<?php
+			$all_slides = get_sub_field( 'all_slides' );
+			//print_r( $all_slides );
+			$delay = 0;
+			foreach( $all_slides as $slide ) :
+				printf(
+					'<figure style="background-image: url(%s); animation-delay: %ss;"></figure>',
+					esc_url( $slide[slide] ),
+					$delay
+				);
+				$delay += 6;
+			endforeach;
+			?>
+		</div>
+		<?php echo '<style type="text/css">.home section.homepage-hero .slideshow-container > figure {animation-duration: ' . $delay . 's }</style>';
+		endwhile;
+		endif; // end photo_slideshow group
+		endif; // end if slideshow choice ?>
 		<div class="hero-content">
 			<?php if ( get_field( 'hero_text_line_one' ) ) :
 			echo '<h1>' . the_field( 'hero_text_line_one' ) . '</h1>';
