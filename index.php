@@ -2,9 +2,9 @@
 
 	<div id="content">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="row container">
 
-			<main id="main" class="large-8 medium-8 columns" role="main">
+			<main id="main" class="main-column" role="main">
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 

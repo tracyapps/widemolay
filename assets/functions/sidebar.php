@@ -7,7 +7,7 @@ function start_register_sidebars() {
 		'description' => __( 'The first (primary) sidebar.', 'start' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
 
@@ -17,7 +17,7 @@ function start_register_sidebars() {
 		'description' => __( 'An area for widgets in the footer.', 'start' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
 
@@ -27,7 +27,7 @@ function start_register_sidebars() {
 		'description' => __( 'An area for widgets in the footer.', 'start' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
 
@@ -37,7 +37,7 @@ function start_register_sidebars() {
 		'description' => __( 'An area for widgets in the footer.', 'start' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	) );
 
@@ -55,7 +55,7 @@ function start_register_sidebars() {
 		'description' => __('The second (secondary) sidebar.', 'start'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
+		'before_title' => '<h4 class="widget-title">',
 		'after_title' => '</h4>',
 	));
 

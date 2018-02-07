@@ -1,1 +1,50 @@
+.sidebar {
+	h4.widget-title {
+		display: block;
+		background: $light-red;
+		color: $light;
+		padding: 8px 15px;
+		line-height: 1;
+		font-size: 2.3rem;
+		border-radius: 3px;
+	}
+	.widget {
+		margin-bottom: 3rem;
+		padding-bottom: 3rem;
+		border-bottom: 1px dotted rgba( $dark-blue, 0.25 );
+		font-size: 85%;
 
+
+		&:nth-of-type(5n-4) {
+			h4.widget-title {
+				background: $dark-blue;
+				color: $light;
+			}
+		}
+		&:nth-of-type(5n-3) {
+			h4.widget-title {
+				background: $yellow;
+				color: $dark;
+			}
+		}
+		&:nth-of-type(5n-2) {
+			h4.widget-title {
+				background: $green;
+				color: $dark;
+			}
+		}
+
+		&:nth-of-type(5n-1) {
+			h4.widget-title {
+				background: $light-blue;
+				color: $dark;
+			}
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0 15px;
+		}
+	}
+}

@@ -2,7 +2,7 @@
 
 	<div id="content">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="row container">
 
 			<main id="main" class="main" role="main">
 
@@ -12,15 +12,15 @@
 				</header>
 
 				<?php if ( have_posts() ) :
-					echo '<secton class="archive-grid blog-grid">';
+					echo '<section class="archive-list-container">';
 					while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'parts/loop', 'archive-grid' ); ?>
+						<?php get_template_part( 'parts/loop', 'archive-list' ); ?>
 
 
 				<?php endwhile; ?>
 
-					</secton>
+					</section>
 
 					<?php start_page_navi(); ?>
 

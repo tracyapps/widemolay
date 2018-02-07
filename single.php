@@ -2,7 +2,7 @@
 
 	<div id="content">
 
-		<div id="inner-content" class="row">
+		<div id="inner-content" class="row container">
 
 			<main id="main" class="main-column" role="main">
 

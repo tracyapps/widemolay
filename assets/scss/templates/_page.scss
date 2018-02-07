@@ -3,7 +3,6 @@
 	display: block;
 	text-align: center;
 	position: relative;
-	overflow: hidden;
 	margin: 1em 0 0 0;
 	padding-top: 3rem;
 	line-height: 1.2;
@@ -11,7 +10,7 @@
 	letter-spacing: -1px;
 
 	@include phone-only {
-		font-size: 3em;
+		font-size: 3.3em;
 	}
 
 	.smaller {
@@ -22,6 +21,11 @@
 		font-family: $sans-serif;
 		font-weight: normal;
 		margin-bottom: -3rem;
+
+		@include phone-only {
+			font-size: 2rem;
+			margin-bottom: -1rem;
+		}
 	}
 
 }
