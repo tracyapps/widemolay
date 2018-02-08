@@ -1,8 +1,68 @@
 .mec-container,
 #main-content {
 	padding-top: 5vh;
+
+	.mec-wrap {
+		font-family: $sans-serif;
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		div {
+			font-family: $sans-serif;
+		}
+
+	}
 }
 
 .mec-wrap {
 	overflow: hidden;
+}
+
+.mec-events-event-image {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.mec-single-event {
+	.mec-event-meta {
+
+	}
+	.mec-event-content {
+		background: $white;
+		padding: 2rem 3rem;
+		margin-bottom: 30px;
+
+		p {
+			color: $default-text-color;
+			font-family: $body-font;
+			font-style: normal;
+			font-weight: 300;
+			font-size: $base-font-size;
+			line-height: 1.4;
+		}
+	}
+	h3.mec-frontbox-title {
+		font-size: $h4-font-size;
+	}
+	.mec-event-schedule-content {
+		dl {
+			font-size: 1.4rem;
+
+			dt.mec-schedule-title {
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	input[type="text"] {
+		margin-left: 0;
+	}
+}
+.mec-events-meta-group-countdown .countdown-w .block-w {
+	font-size: 2.5rem;
 }
