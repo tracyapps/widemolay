@@ -25,7 +25,18 @@
 			<h3 class="title">
 				<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 			</h3>
-			<?php get_template_part( 'parts/content', 'byline' ); ?>
+
+			<?php
+			$article_type = get_post_type( $post->ID );
+
+			if( $article_type == 'person' ) :
+				echo '<h6 class="person-title">' . get_field( 'person_position' ) . '</h6>';
+			elseif( $article_type == 'page' ) :
+
+			elseif( $article_type == 'post' ) :
+				get_template_part( 'parts/content', 'byline' );
+			endif;
+			?>
 		</header> <!-- end article header -->
 
 		<section class="entry-content" itemprop="articleBody">

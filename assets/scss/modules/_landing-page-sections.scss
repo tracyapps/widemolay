@@ -1,0 +1,156 @@
+.landing-page-section {
+	background-size: cover;
+	background-position: center center;
+
+	.container {
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
+
+	.section-title {
+		margin-bottom: 1.5rem;
+	}
+
+	&.break {
+		padding-top: 2em;
+		padding-bottom: 2em;
+	}
+
+	&.bottom-curve {
+		padding-bottom: 5em;
+		border-bottom-left-radius: 50% 20%;
+		border-bottom-right-radius: 50% 20%;
+	}
+
+	&.top-curve {
+		padding-top: 5em;
+		border-top-left-radius: 50% 20%;
+		border-top-right-radius: 50% 20%;
+	}
+
+	&.bottom-fade {
+		padding-bottom: 4em;
+		-webkit-mask-image: linear-gradient(to top, transparent 0, black 5em);
+		mask-image: linear-gradient(to top, transparent 0, black 5em);
+		-webkit-mask-mode: luminance;
+		mask-mode: luminance;
+		margin-bottom: -2em;
+
+	}
+
+	&.top-fade {
+		padding-top: 4em;
+		-webkit-mask-image: linear-gradient(transparent 0, black 5em);
+		mask-image: linear-gradient(transparent 0, black 5em);
+		-webkit-mask-mode: luminance;
+		mask-mode: luminance;
+	}
+
+	&.bottom-angle {
+		padding-bottom: 3em;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+		margin-bottom: -2em;
+	}
+
+	&.top-angle {
+		padding-top: 3em;
+		-webkit-clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+		clip-path: polygon(0 0, 100% 8%, 100% 100%, 0 100%);
+	}
+
+	// size classes
+
+	&.full-height {
+		min-height: 90vh;
+	}
+
+	@include tablet-up {
+		.full {
+			width: 100%;
+		}
+
+		.golden-large {
+			width: $golden-large;
+		}
+
+		.half {
+			width: 50%;
+		}
+
+		.golden-small {
+			width: calc( 100% - #{$golden-large});
+		}
+	}
+
+
+	p {
+		padding: 0;
+
+		img {
+			&.alignright {
+				margin-right: 0;
+			}
+			&.alignleft {
+				margin-left: 0;
+			}
+			&.aligncenter {
+				width: auto;
+				margin: 2rem auto;
+			}
+		}
+	}
+
+	.cta-button-area {
+		text-align: center;
+	}
+
+	// break styles
+	.cta-container {
+		display: flex;
+		align-items: center;
+
+
+		> div {
+			flex: 1;
+
+			&.cta-button {
+				text-align: center;
+			}
+		}
+	}
+
+	// full section styles
+	.landing-page-section-content {
+
+
+		// freeform
+		&.content-type_freeform {
+			overflow: hidden;
+			clear: both;
+
+		}
+
+		// grid
+		&.content-type_grid {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			justify-content: space-evenly;
+			align-content: space-around;
+
+			.block  {
+				min-width: 330px;
+				padding: 1rem 2rem;
+				flex: 1;
+				background-size: cover;
+				background-position: center center;
+
+				h6 {
+					margin: 0.5em 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

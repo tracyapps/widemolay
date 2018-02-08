@@ -50,6 +50,7 @@ body {
 
 a {
 	color: $default-link-color;
+	transition: all $button-transition-speed ease-in-out;
 
 	&:hover,
 	&:focus,

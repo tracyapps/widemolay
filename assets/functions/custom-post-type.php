@@ -42,7 +42,7 @@ function start_custom_post_types() {
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 7,
 		'menu_icon'           => 'dashicons-nametag',
-		'rewrite'             => array( 'slug' => 'the-team' ),
+		'rewrite'             => array( 'slug' => 'people' ),
 		'can_export'          => true,
 		'has_archive'         => true,
 		'exclude_from_search' => false,
@@ -85,7 +85,7 @@ function start_custom_post_types() {
 			'menu_position' => 20,
 			'menu_icon' => 'dashicons-welcome-widgets-menus',
 			'rewrite' => array(
-				'slug' => '😉',
+				'slug' => '!',
 				'with_front' => false
 			),
 			/* you can specify its url slug */
@@ -210,7 +210,7 @@ function start_person_display_additional_fields() {
 
 			$output .= sprintf(
 				'<li class="row person-detail">
-					<span class="label">%s</span>
+					<span class="label"><p>%s</p></span>
 					<span class="detail">%s</span>
 				</li>',
 				esc_html( get_sub_field( 'detail_label' ) ),

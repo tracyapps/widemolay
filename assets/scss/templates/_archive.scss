@@ -44,3 +44,75 @@ article.archive {
 	}
 
 }
+
+.archive-grid {
+	display: flex;
+	align-content: space-around;
+	justify-content: space-around;
+
+
+	.grid {
+		min-width: 400px;
+		min-height: 400px;
+		background-size: cover;
+		background-position: center center;
+		display: flex;
+		flex-direction: column;
+		align-content: flex-end;
+		align-items: stretch;
+
+		&:hover {
+			box-shadow: 1px 1px 3px rgba( $dark, 0.2 );
+			
+			.top-space {
+				a,
+				a:visited {
+					background: rgba( $light, 0.2 );
+				}
+			}
+			.article-header {
+				a,
+				a:visited {
+					color: $yellow;
+				}
+			}
+		}
+
+		.top-space {
+			flex: 1;
+			display: flex;
+
+			a {
+				display: block;
+				flex: 1;
+
+			}
+		}
+
+		.article-header {
+			@include blue-gradient;
+			padding: 2rem;
+			text-align: center;
+			color: $light;
+
+			h3,
+			h6 {
+				margin: 0;
+				padding: 0;
+				line-height: 1;
+				text-shadow: 1px 1px 3px rgba( $dark, 0.2 );
+			}
+			a,
+			a:visited {
+				color: $light;
+				text-decoration: none;
+
+				&:hover {
+					color: $yellow;
+				}
+			}
+		}
+
+
+	}
+}
