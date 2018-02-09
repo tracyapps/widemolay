@@ -55,6 +55,51 @@ function start_custom_post_types() {
 
 
 	/**
+	 * CPT: Chapter
+	 */
+
+	$labels = array(
+		'name'                => _x( 'Chapters', 'Post Type General Name', 'start' ),
+		'singular_name'       => _x( 'Chapter', 'Post Type Singular Name', 'start' ),
+		'menu_name'           => __( 'Chapters', 'start' ),
+		'parent_item_colon'   => __( '', 'start' ),
+		'all_items'           => __( 'All chapters', 'start' ),
+		'view_item'           => __( '', 'start' ),
+		'add_new_item'        => __( 'Add new chapter', 'start' ),
+		'add_new'             => __( 'Add new chapter', 'start' ),
+		'edit_item'           => __( 'Edit chapter', 'start' ),
+		'update_item'         => __( 'Update chapter', 'start' ),
+		'search_items'        => __( 'Search all chapters', 'start' ),
+		'not_found'           => __( 'No chapters found', 'start' ),
+		'not_found_in_trash'  => __( 'No chapters found in trash', 'start' ),
+	);
+	$args = array(
+		'label'               => __( 'Chapters', 'start' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor' ),
+		'hierarchical'        => true,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 6,
+		'menu_icon'           => 'dashicons-flag',
+		'rewrite'             => array( 'slug' => 'chapter', 'with_front' => true ),
+		'query_var' 		  => true,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'map_meta_cap'		  => true,
+	);
+
+	// NEVER USE 'action' HERE, IT'S A RESERVED WORD
+	register_post_type( 'chapter', $args );
+
+
+	/**
 	 * CPT: landing page
 	 */
 	register_post_type( 'landing-page', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */

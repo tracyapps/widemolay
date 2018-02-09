@@ -33,6 +33,7 @@ body.has-featured-image {
 			height: 100%;
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-position: center center;
 		}
 		.featured-image-cover {
 			position: fixed;
@@ -51,5 +52,10 @@ body.has-featured-image {
 		position: relative;
 		z-index: 5;
 		background: $default-background-color;
+
+		.page-title {
+			margin: 0.5em 0;
+			padding: 0;
+		}
 	}
 }

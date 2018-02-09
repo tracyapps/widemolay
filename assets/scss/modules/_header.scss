@@ -10,7 +10,7 @@
 
 .site-header {
 	background: $header-background-color;
-	min-height: 30vh;
+	min-height: 40vh;
 	transition: all 1500ms ease-in-out;
 	transform: rotate(-2.1deg) skew(-2.1deg);
 	padding-top: 8vh;
@@ -27,7 +27,7 @@
 	.logo {
 		height: 12vh;
 		width: auto;
-		margin: 6vh auto;
+		margin: 9vh auto 2vh auto;
 		transform: skew(2.1deg);
 		transition: all 1500ms ease-in-out;
 
@@ -138,6 +138,8 @@
 
 		.logo {
 			transform: skew(0deg);
+			height: 9vh;
+			margin: 16vh auto 1vh auto;
 
 			svg {
 				.main-letter-color-fill {

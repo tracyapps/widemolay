@@ -5,7 +5,7 @@
 
 // change / add to the background choices here
 $background_choices_available = array (
-	'none' 		=> 'No background',
+	'none' 		=> 'No background (Default)',
 	'inverse' 	=> 'Inverse',
 	'dark-blue'	=> 'Solid blue',
 	'green'		=> 'Solid green',
@@ -25,6 +25,11 @@ $where_sections_are_active = array (
 			'param' => 'post_type',
 			'operator' => '==',
 			'value' => 'page',
+		),
+		array(
+			'param' => 'page_template',
+			'operator' => '!=',
+			'value' => 'template-no-acf.php',
 		),
 	),
 /*	add any additional post types here. 
@@ -1512,7 +1517,7 @@ if( function_exists('acf_add_local_field_group') ):
 										'choices' => array (
 											'Grid' => 'Grid',
 											'List' => 'List',
-											'Slider' => 'Slider',
+											//'Slider' => 'Slider',
 										),
 										'default_value' => array (
 											0 => 'Grid',

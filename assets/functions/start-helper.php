@@ -175,7 +175,7 @@ function start_display_child_pages() {
 		$output .= sprintf(
 			'<div class="child-page-box">
 				<h6><a href="%s">%s</a></h6>
-				<div class="child-page-link %s round">
+				<div class="child-page-link %s blue-gradient-background">
 					<a href="%s">
 					<svg class="icon-%s-dims icon">
 						<use xlink:href="#%s"></use>
@@ -230,7 +230,7 @@ function start_display_child_pages_with_options() {
 		$output .= '<div class="child-page-box">';
 
 		if( $display_icons == true ) :
-			$output .= '<div class="child-page-link ' . esc_html( $the_background ) . ' round">';
+			$output .= '<div class="child-page-link ' . esc_html( $the_background ) . ' blue-gradient-background">';
 			if( $display_links == true ) :
 				$output .= '<a href="' . esc_url( get_permalink( $one_child->ID ) ) . '">';
 			else :
@@ -243,6 +243,16 @@ function start_display_child_pages_with_options() {
 				$output .= '</span>';
 			endif;
 			$output .= '</div>';
+
+		else :
+			$output .= '<div class="child-page-link ' . esc_html( $the_background ) . ' blue-gradient-background no-icon">';
+			if( $display_links == true ) :
+				$output .= '<a href="' . esc_url( get_permalink( $one_child->ID ) ) . '"><span> </span></a>';
+			else :
+				$output .= '<span> </span>';
+			endif;
+			$output .= '</div>';
+
 		endif;
 
 		if( $display_page_titles == true ) :
