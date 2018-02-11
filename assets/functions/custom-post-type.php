@@ -369,3 +369,197 @@ function start_person_display_name() {
 
 	return $output;
 }
+
+/**
+ * Display basic Chapter address.
+ *
+ * @return string
+ */
+
+function start_chapter_display_address() {
+	$output = '<div class="chapter-address">';
+	
+	$chapter_address = get_field( 'address' );
+
+	if( $chapter_address[ 'lodge_name' ] ) {
+		$output .= '<span class="lodge-name"><strong>' . esc_html( $chapter_address[ 'lodge_name' ] ) . '</strong></span>';
+	}
+	if( $chapter_address[ 'address_line_1' ] ) {
+		$output .= '<span class="address-line-one">' . esc_html( $chapter_address[ 'address_line_1' ] ) . '</span>';
+	}
+	if( $chapter_address[ 'address_line_2' ]) {
+		$output .= '<span class="address-line-two">' . esc_html( $chapter_address[ 'address_line_2' ] ) . '</span>';
+	}
+	if( $chapter_address[ 'city' ] || $chapter_address[ 'zip_code' ] ) {
+		$output .= '<span class="city-state-zip">' . esc_html( $chapter_address[ 'city' ]) . ', WI ' . esc_html( $chapter_address[ 'zip_code' ] ) . '</span>';
+	}
+
+	$output .= '</div>';
+
+	return $output;
+}
+
+function start_chapter_meeting_times() {
+	$output ='';
+
+	$chapter_details = get_field( 'chapter_details' );
+
+	if( $chapter_details[ 'meeting_times' ] ) :
+		$output .= '<span class="meeting-times">' . wp_kses_post( $chapter_details[ 'meeting_times' ] ) . '</span>';
+	endif;
+
+	return $output;
+}
+
+
+/**
+ * Display google map
+ *
+ * @return string
+ */
+
+function start_display_chapter_google_map() {
+	$chapter_address = get_field( 'address' );
+	$output = '';
+	$location = $chapter_address[ 'map' ];
+
+	if( !empty($location) ):
+
+		$output .= sprintf(
+			'<div class="acf-map"> 
+				<div class="marker" data-lat="%s" data-lng="%s"></div>
+			</div>',
+			$location[ 'lat' ],
+			$location[ 'lng' ]
+		);
+	endif;
+
+	return $output;
+}
+
+/**
+ * Display Chapter Officers
+ *
+ * @return string
+ */
+function start_chapter_display_officers() {
+	while ( have_rows( 'chapter_details' ) ) : the_row();
+
+	$output = '<ul class="chapter-officers-list chapter-list">';
+
+	while ( have_rows( 'chapter_officers' ) ) :
+
+		the_row();
+
+		$output .= sprintf(
+			'<li class="row chapter-officer">
+				<span class="office">%s</span>
+				<span class="name">%s</span>
+			</li>',
+			esc_html( get_sub_field( 'office' ) ),
+			esc_html( get_sub_field( 'name' ) )
+		);
+
+	endwhile;
+
+	$output .= '</ul>';
+
+	endwhile;
+
+	return $output;
+}
+
+/**
+ * Display Chapter Advisors
+ *
+ * @return string
+ */
+function start_chapter_display_advisors() {
+	while ( have_rows( 'chapter_details' ) ) : the_row();
+
+		$output = '<ul class="chapter-advisors-list chapter-list">';
+
+		while ( have_rows( 'chapter_advisors' ) ) :
+
+			the_row();
+
+			$output .= sprintf(
+				'<li class="row chapter-advisor">
+				<span class="role">%s</span>
+				<span class="name">%s</span>
+			</li>',
+				esc_html( get_sub_field( 'role' ) ),
+				esc_html( get_sub_field( 'name' ) )
+			);
+
+		endwhile;
+
+		$output .= '</ul>';
+
+	endwhile;
+
+	return $output;
+}
+
+
+/**
+ * Functions for the "fake" pages for CHAPTER CPT
+ */
+
+// Fake pages' permalinks and titles.
+
+$chapter_fake_pages = array(
+	'officers' => 'Chapter Officers',
+	'advisors' => 'Chapter Advisors',
+	'calendar' => 'Events Calendar',
+	'photos' => 'Photo Gallery',
+	'newsletter' => 'Newsletters'
+);
+
+
+
+
+add_filter('rewrite_rules_array', 'fsp_insertrules');
+add_filter('query_vars', 'fsp_insertqv');
+
+// Adding fake pages' rewrite rules
+function fsp_insertrules($rules)
+{
+	global $chapter_fake_pages;
+
+	$newrules = array();
+	foreach ($chapter_fake_pages as $slug => $title)
+		$newrules['chapter/([^/]+)/' . $slug . '/?$'] = 'index.php?chapter=$matches[1]&fpage=' . $slug;
+
+	return $newrules + $rules;
+}
+
+// Tell WordPress to accept our custom query variable
+function fsp_insertqv($vars)
+{
+	array_push($vars, 'fpage');
+	return $vars;
+}
+
+// Remove WordPress's default canonical handling function
+
+remove_filter('wp_head', 'rel_canonical');
+add_filter('wp_head', 'fsp_rel_canonical');
+function fsp_rel_canonical()
+{
+	global $current_fp, $wp_the_query;
+
+	if (!is_singular())
+		return;
+
+	if (!$id = $wp_the_query->get_queried_object_id())
+		return;
+
+	$link = trailingslashit(get_permalink($id));
+
+	// Make sure fake pages' permalinks are canonical
+	if (!empty($current_fp))
+		$link .= user_trailingslashit($current_fp);
+
+	echo '<link rel="canonical" href="'.$link.'" />';
+}

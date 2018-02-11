@@ -70,20 +70,38 @@ img {
 
 .gallery {
 	display: flex;
-	align-items: center;
 	flex-flow: row wrap;
 	width: 100%;
 	padding: 2rem;
 	margin: 2rem auto;
+	align-items: stretch;
 
+	dl,
 	li {
 		display: inline-flex;
 		flex: 33.333%;
 		margin: 0;
+		max-height: 250px;
+		overflow: hidden;
+
+		dt {
+			height: 100%;
+			width: 100%;
+
+		}
+
+		img {
+			min-width: 100%;
+			height: auto;
+			min-height: 100%;
+			width: auto;
+			object-fit: cover;
+		}
 	}
 
 	a {
 		display: block;
+		height: 100%;
 	}
 }
 

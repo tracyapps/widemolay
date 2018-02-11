@@ -21,6 +21,11 @@
 	.row {
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+
+		.full-width {
+			width: 100%;
+		}
 	}
 	.main-column {
 		width: $golden-large;
@@ -30,5 +35,9 @@
 		width: ( 100% - $golden-large );
 		padding-left: $gutter-width;
 		padding-top: 5vh;
+
+		.individual-chapter-page & {
+			padding-top: 0;
+		}
 	}
 }

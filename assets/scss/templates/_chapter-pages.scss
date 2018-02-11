@@ -1,0 +1,113 @@
+.individual-chapter-page {
+	.return-to-main-site {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		max-width: 35%;
+
+		a,
+		a:visited {
+			text-decoration: none;
+			padding: 3px 3px 0 3px;
+			font-size: 80%;
+		}
+
+		.logo {
+			width: 270px;
+			max-width: 100%;
+			height: auto;
+			padding: 1rem 2rem;
+
+			svg {
+				.main-letter-color-fill {
+					fill: $white;
+				}
+			}
+		}
+	}
+
+	h1.page-title {
+		margin: 0;
+		padding: 0 2rem 3rem 2rem;
+	}
+
+	h2.section-title {
+		padding-top: 0;
+	}
+
+	nav.chapter-page-navigation {
+		padding: 1rem 2rem;
+		border-top: 3px solid rgba( $red, 0.96 );
+		border-bottom: 1px solid rgba( $red, 0.6 );
+		box-shadow: 0 1px 3px rgba( $dark, 0.38 );
+		margin-bottom: 5rem;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style: none;
+			justify-content: center;
+			flex-wrap: wrap;
+
+			li {
+				padding: 0;
+				margin: 0;
+
+				a,
+				a:visited {
+					text-decoration: none;
+					padding: 1rem 2rem;
+					border: 1px solid darken( $yellow, 7 );
+					margin-left: -1px;
+					display: inline-block;
+					color: $dark;
+
+					&:hover {
+						background: $red;
+						color: $white;
+					}
+				}
+			}
+		}
+	}
+
+	.chapter-list {
+		margin: 1rem;
+		list-style: none;
+		padding: 0;
+
+		li.row {
+			display: flex;
+			padding: 1rem;
+			border-bottom: 1px solid rgba( $light-blue, 0.25 );
+
+			&:hover {
+				background: rgba( lighten( $light-blue, 30 ), 0.1 );
+			}
+
+			> span {
+				width: 50%;
+			}
+		}
+	}
+
+
+	// sidebar stuff
+
+	.chapter-address,
+	.meeting-times {
+		padding: 2px 1.5rem;
+		display: block;
+
+		span {
+			display: block;
+		}
+		p:first-of-type {
+			margin-top: 3px;
+		}
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
