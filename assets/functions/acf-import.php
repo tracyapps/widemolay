@@ -3094,7 +3094,7 @@ You may also add latest news or announcement posts, which will show up on your c
 			),
 		),
 		'menu_order' => 2,
-		'position' => 'normal',
+		'position' => 'acf_after_title',
 		'style' => 'default',
 		'label_placement' => 'top',
 		'instruction_placement' => 'label',
