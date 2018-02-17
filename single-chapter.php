@@ -103,7 +103,14 @@
 				<?php echo start_display_chapter_google_map(); ?>
 
 				<h4 class="widget-title">Meetings</h4>
-				<?php echo start_chapter_meeting_times(); ?>
+					<?php echo start_chapter_meeting_times(); ?>
+
+				<?php if( get_field( 'chapter_email_address' ) || get_field( 'chapter_phone_number' ) || have_rows( 'chapter_social_media' ) ) : ?>
+				<h4 class="widget-title">Contact</h4>
+					<?php echo start_chapter_display_contact_information(); ?>
+					<?php echo start_chapter_display_social_media_profiles(); ?>
+
+				<?php endif; ?>
 			</aside>
 			
 		</div> <!-- end #inner-content -->

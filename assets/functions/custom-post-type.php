@@ -343,6 +343,72 @@ function start_person_display_social_media_profiles() {
 }
 
 /**
+ * Display basic contact information of a chapter.
+ *
+ * @return string
+ */
+function start_chapter_display_contact_information() {
+
+	$output = '';
+
+	// display basic contact info
+
+	$output .= '<div class="chapter-contact-information">';
+
+	$output .= ( get_field( 'chapter_email_address' ) ) ? '<div class="chapter-email row"><span class="label">Email: </span><span class="detail"><a href="mailto:' . get_field( 'chapter_email_address' ) . '">' . get_field( 'chapter_email_address' ) . '</a></span></div>' : '';
+	$output .= ( get_field( 'chapter_phone_number' ) ) ? '<div class="chapter-phone row"><span class="label">Phone: </span><span class="detail">' . get_field( 'chapter_phone_number' ) . '</span></div>' : '';
+
+	$output .= '</div>';
+
+	return $output;
+}
+
+/**
+ * Display Social Media Links (repeater field) for Chapters
+ *
+ * @return string
+ */
+function start_chapter_display_social_media_profiles() {
+
+	$output = '';
+
+	// displaying social media links (repeater)
+	if ( have_rows( 'chapter_social_media' ) ) :
+
+		$output = '<ul class="chapter-social-media-profiles">';
+
+		while ( have_rows( 'chapter_social_media' ) ) :
+
+			the_row();
+
+			$output .= sprintf(
+				'<li class="row social-detail %s">
+					<a href="%s" class="icon icon-%s">
+					<span><svg class="icon-%s-dims icon">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#%s"></use>
+						<text>%s</text>
+					</svg></span>
+					</a>
+				</li>',
+				esc_html( strtolower( get_sub_field( 'service' ) ) ),
+				esc_url( get_sub_field( 'profile_link' ) ),
+				esc_html( strtolower( get_sub_field( 'service' ) ) ),
+				esc_html( strtolower( get_sub_field( 'service' ) ) ),
+				esc_html( strtolower( get_sub_field( 'service' ) ) ),
+				esc_html( ucfirst( get_sub_field( 'service' ) ) )
+			);
+
+		endwhile;
+
+		$output .= '</ul>';
+
+	endif;
+
+	return $output;
+}
+
+
+/**
  * Display Link to Associated User's author page.
  *
  * @return mixed

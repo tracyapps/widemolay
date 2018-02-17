@@ -96,7 +96,8 @@
 	// sidebar stuff
 
 	.chapter-address,
-	.meeting-times {
+	.meeting-times,
+	.chapter-contact-information {
 		padding: 2px 1.5rem;
 		display: block;
 
@@ -108,6 +109,17 @@
 		}
 		p:last-of-type {
 			margin-bottom: 0;
+		}
+	}
+
+	.chapter-social-media-profiles {
+		margin: 1rem 1.5rem;
+		padding: 0;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			margin: 1rem;
 		}
 	}
 }

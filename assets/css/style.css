@@ -446,7 +446,8 @@ h6 {
   .secondary-column {
     width: 33.2%;
     padding-left: 30px;
-    padding-top: 5vh; }
+    padding-top: 5vh;
+    padding-bottom: 8rem; }
     .individual-chapter-page .secondary-column {
       padding-top: 0; } }
 
@@ -1649,6 +1650,70 @@ footer.site-footer {
 .centered-title {
   text-align: center; }
 
+#content form.gmw-form .address-locator-wrapper {
+  width: 40%; }
+  #content form.gmw-form .address-locator-wrapper input[type="text"] {
+    font-size: 1.3rem;
+    width: 100%; }
+
+#content form.gmw-form input[type="submit"] {
+  padding: 0.3rem 0.8rem;
+  font-size: 1.4rem; }
+
+#content .gmw-pt-per-page-dropdown {
+  height: auto !important; }
+
+#content .wppl-single-result {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  box-sizing: border-box; }
+  #content .wppl-single-result > div {
+    -ms-flex: 1;
+    flex: 1;
+    width: auto; }
+  #content .wppl-single-result .wppl-title-holder {
+    width: 50%;
+    margin: 1rem 0 1rem 1rem;
+    padding: 1rem;
+    border-right: none; }
+  #content .wppl-single-result #wppl-taxes-wrapper {
+    display: none; }
+  #content .wppl-single-result h2.wppl-h2 {
+    line-height: 1.2;
+    font-size: 30.6px; }
+    @media (max-width: 600px) {
+      #content .wppl-single-result h2.wppl-h2 {
+        font-size: calc( 30.6px / 1.2); } }
+    #content .wppl-single-result h2.wppl-h2 a {
+      text-decoration: none; }
+  #content .wppl-single-result .wppl-info {
+    width: auto;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem;
+    border-left: none; }
+    #content .wppl-single-result .wppl-info div span {
+      font-size: 1.8rem;
+      line-height: 1.3; }
+  @media (max-width: 900px) {
+    #content .wppl-single-result {
+      display: block; }
+      #content .wppl-single-result .wppl-title-holder,
+      #content .wppl-single-result .wppl-info {
+        width: auto;
+        display: block;
+        margin: 0 1rem;
+        border: 1px solid #ccc; }
+      #content .wppl-single-result .wppl-title-holder {
+        margin-top: 1rem;
+        border-bottom: none; }
+      #content .wppl-single-result .wppl-info {
+        margin-bottom: 1rem;
+        border-top: none; } }
+
 .home section.homepage-hero {
   min-height: 70vh;
   color: #fff;
@@ -2068,18 +2133,30 @@ ol.commentlist {
       width: 50%; }
 
 .individual-chapter-page .chapter-address,
-.individual-chapter-page .meeting-times {
+.individual-chapter-page .meeting-times,
+.individual-chapter-page .chapter-contact-information {
   padding: 2px 1.5rem;
   display: block; }
   .individual-chapter-page .chapter-address span,
-  .individual-chapter-page .meeting-times span {
+  .individual-chapter-page .meeting-times span,
+  .individual-chapter-page .chapter-contact-information span {
     display: block; }
   .individual-chapter-page .chapter-address p:first-of-type,
-  .individual-chapter-page .meeting-times p:first-of-type {
+  .individual-chapter-page .meeting-times p:first-of-type,
+  .individual-chapter-page .chapter-contact-information p:first-of-type {
     margin-top: 3px; }
   .individual-chapter-page .chapter-address p:last-of-type,
-  .individual-chapter-page .meeting-times p:last-of-type {
+  .individual-chapter-page .meeting-times p:last-of-type,
+  .individual-chapter-page .chapter-contact-information p:last-of-type {
     margin-bottom: 0; }
+
+.individual-chapter-page .chapter-social-media-profiles {
+  margin: 1rem 1.5rem;
+  padding: 0;
+  text-align: center; }
+  .individual-chapter-page .chapter-social-media-profiles li {
+    display: inline-block;
+    margin: 1rem; }
 
 .icon-calendar-dims {
   width: 100px;
