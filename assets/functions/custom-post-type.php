@@ -76,7 +76,7 @@ function start_custom_post_types() {
 	$args = array(
 		'label'               => __( 'Chapters', 'start' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor' ),
+		'supports'            => array( 'title', 'editor', 'author' ),
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,
