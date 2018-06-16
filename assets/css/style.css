@@ -667,6 +667,9 @@ input[type="submit"] {
         text-align: center;
         transition: all 400ms ease-in-out;
         position: relative; }
+        .site-header .main-navigation ul > li.nav-item-small {
+          -ms-flex: none;
+          flex: none; }
         .site-header .main-navigation ul > li.current_page_item {
           background: rgba(242, 242, 242, 0.6); }
         .site-header .main-navigation ul > li:hover {
@@ -754,6 +757,9 @@ input[type="submit"] {
       position: relative; }
       .main-navigation-sticky ul > li.current_page_item {
         background: rgba(242, 242, 242, 0.6); }
+      .main-navigation-sticky ul > li.nav-item-small {
+        -ms-flex: none;
+        flex: none; }
       .main-navigation-sticky ul > li:hover {
         background: rgba(242, 242, 242, 0.6); }
         .main-navigation-sticky ul > li:hover ul {

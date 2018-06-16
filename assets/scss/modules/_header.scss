@@ -65,6 +65,10 @@
 				transition: all $button-transition-speed ease-in-out;
 				position: relative;
 
+				&.nav-item-small {
+					flex: none;
+				}
+
 				&.current_page_item {
 					background: rgba( $light, 0.6 );
 				}
@@ -205,6 +209,10 @@
 
 			&.current_page_item {
 				background: rgba( $light, 0.6 );
+			}
+
+			&.nav-item-small {
+				flex: none;
 			}
 
 			&:hover {
