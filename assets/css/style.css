@@ -2034,7 +2034,9 @@ ol.commentlist {
     text-decoration: none;
     background: #232D45;
     color: #fff !important;
-    border-color: #fff; }
+    border-color: #fff;
+    opacity: 0.5;
+    transition: all 200ms ease-in-out; }
     .mec-wrap .mec-events-masonry-cats a[data-filter="*"] {
       background: #00d5fb;
       color: #202020 !important; }
@@ -2044,8 +2046,9 @@ ol.commentlist {
     .mec-wrap .mec-events-masonry-cats a[data-filter=".mec-t8"] {
       background: #F4CA1A;
       color: #202020 !important; }
-    .mec-wrap .mec-events-masonry-cats a:hover {
-      border-color: #00d5fb; }
+    .mec-wrap .mec-events-masonry-cats a:hover, .mec-wrap .mec-events-masonry-cats a.mec-masonry-cat-selected {
+      border-color: #00d5fb;
+      opacity: 1; }
 
 .mec-events-event-image img {
   width: 100%;

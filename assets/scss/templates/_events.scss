@@ -27,12 +27,14 @@
 			background: $logo-blue;
 			color: $white !important;
 			border-color: $white;
+			opacity: 0.5;
+			transition: all 200ms ease-in-out;
 
 			&[data-filter="*"] {
 				background: $light-blue;
 				color: $dark !important;
 			}
-			
+
 			&[data-filter=".mec-t32"] {
 				background: $red;
 				color: $white !important;
@@ -43,8 +45,10 @@
 				color: $dark !important;
 			}
 
-			&:hover {
+			&:hover,
+			&.mec-masonry-cat-selected {
 				border-color: $light-blue;
+				opacity: 1;
 			}
 		}
 
