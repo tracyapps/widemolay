@@ -20,6 +20,20 @@
 
 .mec-wrap {
 	overflow: hidden;
+
+	.mec-events-masonry-cats {
+		a {
+			text-decoration: none;
+
+			&[data-filter=".mec-t32"] {
+				background: $red;
+				color: $white !important;
+			}
+		}
+
+	}
+
+
 }
 
 .mec-events-event-image {
