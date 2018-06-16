@@ -21,7 +21,10 @@ jQuery(document).ready( function($) {
 	});
 
 
-	var stickyNavTop = $('.main-navigation').offset().top;
+	var topNav = $('.main-navigation');
+	if (topNav.length) {
+		var stickyNavTop = $('.main-navigation').offset().top;
+	}
 
 	var stickyNav = function(){
 		var scrollTop = $(window).scrollTop();
