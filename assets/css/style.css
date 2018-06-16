@@ -2035,8 +2035,8 @@ ol.commentlist {
     background: #232D45;
     color: #fff !important;
     border-color: #fff;
-    opacity: 0.5;
-    transition: all 200ms ease-in-out; }
+    opacity: 0.6;
+    transition: all 500ms ease-in-out; }
     .mec-wrap .mec-events-masonry-cats a[data-filter="*"] {
       background: #00d5fb;
       color: #202020 !important; }
