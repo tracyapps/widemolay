@@ -24,10 +24,17 @@
 	.mec-events-masonry-cats {
 		a {
 			text-decoration: none;
+			background: $logo-blue;
+			color: $white !important;
 
 			&[data-filter=".mec-t32"] {
 				background: $red;
 				color: $white !important;
+			}
+
+			&[data-filter=".mec-t8"] {
+				background: $yellow;
+				color: $dark !important;
 			}
 		}
 

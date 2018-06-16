@@ -2031,10 +2031,15 @@ ol.commentlist {
 .mec-wrap {
   overflow: hidden; }
   .mec-wrap .mec-events-masonry-cats a {
-    text-decoration: none; }
+    text-decoration: none;
+    background: #232D45;
+    color: #fff !important; }
     .mec-wrap .mec-events-masonry-cats a[data-filter=".mec-t32"] {
       background: #B42125;
       color: #fff !important; }
+    .mec-wrap .mec-events-masonry-cats a[data-filter=".mec-t8"] {
+      background: #F4CA1A;
+      color: #202020 !important; }
 
 .mec-events-event-image img {
   width: 100%;
