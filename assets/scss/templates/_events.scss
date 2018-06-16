@@ -26,7 +26,13 @@
 			text-decoration: none;
 			background: $logo-blue;
 			color: $white !important;
+			border-color: $white;
 
+			&[data-filter="*"] {
+				background: $light-blue;
+				color: $dark !important;
+			}
+			
 			&[data-filter=".mec-t32"] {
 				background: $red;
 				color: $white !important;
@@ -35,6 +41,10 @@
 			&[data-filter=".mec-t8"] {
 				background: $yellow;
 				color: $dark !important;
+			}
+
+			&:hover {
+				border-color: $light-blue;
 			}
 		}
 
