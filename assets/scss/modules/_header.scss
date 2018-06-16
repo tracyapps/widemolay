@@ -120,7 +120,7 @@
 			color: $dark;
 			text-decoration: none;
 			padding: 1em;
-			display: inline-block;
+			display: block;
 			transform: rotate(2.1deg);
 			transition: all $button-transition-speed ease-in-out;
 
@@ -254,7 +254,7 @@
 		color: $dark;
 		text-decoration: none;
 		padding: 0.5em 1em;
-		display: inline-block;
+		display: block;
 		transition: all $button-transition-speed ease-in-out;
 
 	}

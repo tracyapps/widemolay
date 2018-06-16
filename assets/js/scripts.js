@@ -43,7 +43,7 @@ jQuery(document).ready( function($) {
 	});
 
 });
-
+ 
 /**
  * scripts for the simple mobile menu
  */
