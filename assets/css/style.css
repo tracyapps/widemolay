@@ -1059,6 +1059,9 @@ body.has-featured-image #content {
     margin: 0.5em 0;
     padding: 0; }
 
+iframe.wp-embedded-content {
+  max-width: 100%; }
+
 .sidebar h4.widget-title {
   display: block;
   background: #ab2626;
@@ -1309,8 +1312,7 @@ footer.site-footer {
     .type-three_col .columns-wrapper {
       display: block; } }
   .type-three_col .columns-wrapper .column {
-    -ms-flex: 1;
-    flex: 1;
+    width: 33%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
