@@ -13,10 +13,11 @@ $image  = get_sub_field( 'hero_image' );
 
 		<?php the_sub_field( 'hero_text' ); ?>
 
-		<a class="button" href="<?php echo esc_url( get_sub_field( 'hero_button_link' ) ); ?>">
-			<?php echo esc_html( get_sub_field( 'hero_button_label' ) ); ?>
-		</a>
-
+		<?php if( get_sub_field( 'hero_button_label' ) != '' ) { ?>
+			<a class="button" href="<?php echo esc_url( get_sub_field( 'hero_button_link' ) ); ?>">
+				<?php echo esc_html( get_sub_field( 'hero_button_label' ) ); ?>
+			</a>
+		<?php } ?>
 	</div>
 
 </div>
