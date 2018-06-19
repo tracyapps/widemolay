@@ -103,6 +103,28 @@ img {
 		display: block;
 		height: 100%;
 	}
+
+	.gallery-item {
+		position: relative;
+
+		dd.gallery-caption {
+			position: absolute;
+			bottom: 0;
+			background: rgba( 255, 255, 255, 0.5);
+			margin: 0;
+			padding: 1em 0.5em;
+			width: 100%;
+			text-align: center;
+			font-size: 80%;
+			opacity: 0;
+		}
+
+		&:hover {
+			dd.gallery-caption {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 
