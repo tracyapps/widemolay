@@ -55,7 +55,9 @@
 			<?php  global $current_user;
 			get_currentuserinfo();
 			echo '<span>Welcome ' . $current_user->display_name . '! </span>';
+			echo ' (';
 			wp_loginout();
+			echo ')';
 			?>
 		</li>
 
