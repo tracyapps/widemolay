@@ -14,6 +14,16 @@ function start_login_title() {
 	return get_option( 'blogname' );
 }
 
+// remove the admin bar for subscribers
+
+function start_hide_admin_bar_for_subscribers() {
+	if ( !current_user_can( 'edit_posts' ) ) {
+		show_admin_bar( false );
+	}
+}
+
+add_action( 'set_current_user', 'start_hide_admin_bar_for_subscribers' );
+
 // calling it only on the login page
 add_action( 'login_enqueue_scripts', 'start_login_css', 10 );
 add_filter( 'login_headerurl', 'start_login_url' );
