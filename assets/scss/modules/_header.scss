@@ -299,6 +299,10 @@ nav.utility-navigation {
 			font-size: 70%;
 			color: rgba( $yellow, 0.8 );
 
+			svg.icon:hover {
+				fill: rgba( $yellow, 0.8 );
+			}
+
 			span {
 				margin-top: -2px;
 			}
@@ -327,30 +331,25 @@ nav.utility-navigation {
 			overflow: visible;
 			position: relative;
 			vertical-align: text-bottom;
-		}
-		a {
-			svg.icon {
+
+			text.tooltip {
+				display: block !important;
+				opacity: 0 !important;
+				background: $dark;
+				fill: rgba( $light, 0.7 ) !important;
 				transition: all $button-transition-speed ease-in-out;
-				
+				z-index: 1900000;
+				font-family: $sans-serif !important;
+				font-size: 1.2rem !important;
+				text-anchor: middle !important;
+			}
+
+			&:hover {
+				fill: rgba( $red, 0.9 );
+
 				text.tooltip {
-					display: block !important;
-					opacity: 0 !important;
-					background: $dark;
-					fill: rgba( $light, 0.7 ) !important;
-					transition: all $button-transition-speed ease-in-out;
-					z-index: 1900000;
-					font-family: $sans-serif !important;
-					font-size: 1.2rem !important;
-					text-anchor: middle !important;
-				}
+					opacity: 1 !important;
 
-				&:hover {
-					fill: rgba( $red, 0.9 );
-
-					text.tooltip {
-						opacity: 1 !important;
-
-					}
 				}
 			}
 		}
