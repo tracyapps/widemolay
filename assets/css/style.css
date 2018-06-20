@@ -825,6 +825,12 @@ nav.utility-navigation {
     transition: all 400ms ease-in-out; }
     .logged-in.admin-bar nav.utility-navigation {
       top: 32px; }
+    nav.utility-navigation .user-welcome {
+      position: absolute;
+      font-size: 70%;
+      color: rgba(244, 202, 26, 0.8); }
+      nav.utility-navigation .user-welcome span {
+        margin-top: -2px; }
     nav.utility-navigation ul {
       margin: 0;
       padding: 0;
@@ -2267,6 +2273,10 @@ ol.commentlist {
 .icon-twitter-dims {
   width: 32px;
   height: 32px; }
+
+.icon-user-dims {
+  width: 100px;
+  height: 100px; }
 
 .icon-wordpressdotcom-dims {
   width: 32px;

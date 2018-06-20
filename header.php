@@ -54,7 +54,7 @@
 			</svg>
 			<?php  global $current_user;
 			get_currentuserinfo();
-			echo 'Welcome ' . $current_user->display_name . '!';
+			echo '<span>Welcome ' . $current_user->display_name . '!</span>';
 			?>
 		</li>
 

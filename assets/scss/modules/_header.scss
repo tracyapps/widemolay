@@ -294,6 +294,15 @@ nav.utility-navigation {
 			top: 32px;
 		}
 
+		.user-welcome {
+			position: absolute;
+			font-size: 70%;
+			color: rgba( $yellow, 0.8 );
+
+			span {
+				margin-top: -2px;
+			}
+		}
 		ul {
 			margin: 0;
 			padding: 0;
