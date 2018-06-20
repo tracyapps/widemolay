@@ -326,25 +326,31 @@ nav.utility-navigation {
 			cursor: pointer;
 			overflow: visible;
 			position: relative;
-
-			text.tooltip {
-				display: block !important;
-				opacity: 0 !important;
-				background: $dark;
-				fill: rgba( $light, 0.7 ) !important;
+			vertical-align: text-bottom;
+		}
+		a {
+			svg.icon {
 				transition: all $button-transition-speed ease-in-out;
-				z-index: 1900000;
-				font-family: $sans-serif !important;
-				font-size: 1.2rem !important;
-				text-anchor: middle !important;
-			}
-
-			&:hover {
-				fill: rgba( $red, 0.9 );
-
+				
 				text.tooltip {
-					opacity: 1 !important;
+					display: block !important;
+					opacity: 0 !important;
+					background: $dark;
+					fill: rgba( $light, 0.7 ) !important;
+					transition: all $button-transition-speed ease-in-out;
+					z-index: 1900000;
+					font-family: $sans-serif !important;
+					font-size: 1.2rem !important;
+					text-anchor: middle !important;
+				}
 
+				&:hover {
+					fill: rgba( $red, 0.9 );
+
+					text.tooltip {
+						opacity: 1 !important;
+
+					}
 				}
 			}
 		}

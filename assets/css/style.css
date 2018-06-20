@@ -851,8 +851,11 @@ nav.utility-navigation {
       margin: 0 auto;
       cursor: pointer;
       overflow: visible;
-      position: relative; }
-      nav.utility-navigation svg.icon text.tooltip {
+      position: relative;
+      vertical-align: text-bottom; }
+    nav.utility-navigation a svg.icon {
+      transition: all 400ms ease-in-out; }
+      nav.utility-navigation a svg.icon text.tooltip {
         display: block !important;
         opacity: 0 !important;
         background: #202020;
@@ -862,9 +865,9 @@ nav.utility-navigation {
         font-family: "soleil", sans-serif !important;
         font-size: 1.2rem !important;
         text-anchor: middle !important; }
-      nav.utility-navigation svg.icon:hover {
+      nav.utility-navigation a svg.icon:hover {
         fill: rgba(180, 33, 37, 0.9); }
-        nav.utility-navigation svg.icon:hover text.tooltip {
+        nav.utility-navigation a svg.icon:hover text.tooltip {
           opacity: 1 !important; }
     nav.utility-navigation .search-form-area {
       font-size: 80%;
