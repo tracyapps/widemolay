@@ -1079,6 +1079,7 @@ body.has-featured-image #content {
     margin: 0.5em 0;
     padding: 0; }
 
+iframe,
 iframe.wp-embedded-content {
   max-width: 100%; }
 
