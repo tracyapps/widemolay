@@ -301,11 +301,9 @@ nav.utility-navigation {
 
 			svg.icon:hover {
 				fill: rgba( $yellow, 0.8 );
+				cursor: auto;
 			}
 
-			span {
-				margin-top: -2px;
-			}
 		}
 		ul {
 			margin: 0;

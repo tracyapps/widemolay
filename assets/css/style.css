@@ -830,9 +830,8 @@ nav.utility-navigation {
       font-size: 70%;
       color: rgba(244, 202, 26, 0.8); }
       nav.utility-navigation .user-welcome svg.icon:hover {
-        fill: rgba(244, 202, 26, 0.8); }
-      nav.utility-navigation .user-welcome span {
-        margin-top: -2px; }
+        fill: rgba(244, 202, 26, 0.8);
+        cursor: auto; }
     nav.utility-navigation ul {
       margin: 0;
       padding: 0;
