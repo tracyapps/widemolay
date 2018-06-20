@@ -279,3 +279,13 @@ h6 {
 	@include default-colors;
 	@include light-gradient;
 }
+
+.red-text {
+	color: $red;
+}
+.blue-text {
+	color: $dark-blue;
+}
+.yellow-text {
+	color: $yellow;
+}

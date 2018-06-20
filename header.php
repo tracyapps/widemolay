@@ -52,12 +52,17 @@
 			<svg class="icon-user-dims icon">
 				<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#user'></use>
 			</svg>
-			<?php  global $current_user;
-			get_currentuserinfo();
-			echo '<span>Welcome ' . $current_user->display_name . '! </span>';
-			echo ' (';
-			wp_loginout();
-			echo ')';
+			<?php
+			if ( is_user_logged_in() ) {
+				global $current_user;
+				get_currentuserinfo();
+				echo '<span>Welcome ' . $current_user->display_name . '! </span>';
+				echo '<span class="red-text"> (';
+				wp_loginout();
+				echo ')</span>';
+			} else {
+				wp_loginout();
+			}
 			?>
 		</li>
 

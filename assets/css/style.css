@@ -425,6 +425,15 @@ h6 {
   .light-gradient-background svg {
     fill: #202020 !important; }
 
+.red-text {
+  color: #B42125; }
+
+.blue-text {
+  color: #071A33; }
+
+.yellow-text {
+  color: #F4CA1A; }
+
 .container {
   width: 90%;
   margin: 0 auto;
