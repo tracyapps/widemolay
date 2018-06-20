@@ -47,6 +47,18 @@
 
 </header> <!-- / .site-header -->
 <nav class="utility-navigation">
+	<ul class="user-welcome">
+		<li class="icon-user">
+			<svg class="icon-user-dims icon">
+				<use xmlns:xlink='http://www.w3.org/1999/xlink' xlink:href='#user'></use>
+			</svg>
+			<?php  global $current_user;
+			get_currentuserinfo();
+			echo 'Welcome ' . $current_user->display_name . '!';
+			?>
+		</li>
+
+	</ul>
 	<ul>
 		<li class="icon-location">
 			<a href="/location/">
