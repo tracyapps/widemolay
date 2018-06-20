@@ -61,8 +61,7 @@
 				wp_loginout();
 				echo ')</span>';
 			} else {
-				wp_loginout();
-				echo '<span class="red-text"> or <a href="/create-an-account/">Create an account</a>.</span>';
+				echo '<span class="red-text"><a href="/login/">Log in</a> or <a href="/create-an-account/">Create an account</a>.</span>';
 			}
 			?>
 		</li>
