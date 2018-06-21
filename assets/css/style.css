@@ -828,7 +828,7 @@ nav.utility-navigation {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 190000;
+    z-index: 99998;
     border-top: 1px solid #010810;
     overflow: visible;
     transition: all 400ms ease-in-out; }
