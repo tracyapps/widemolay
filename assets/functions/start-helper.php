@@ -273,16 +273,3 @@ function start_display_child_pages_with_options() {
 	return $output;
 }
 
-function start_restrict_access_if_logged_out(){
-	global $wp;
-	$protocol='http';
-	if (isset($_SERVER['HTTPS']))
-		if (strtoupper($_SERVER['HTTPS'])=='ON')
-			$protocol='https';
-	if (!is_user_logged_in() && !is_home() && ($wp->query_vars['pagename'] != 'downloads') ){
-		$redirect = home_url() . "/wp-login.php?redirect_to= $protocol://" . $_SERVER["HTTP_HOST"] . urlencode($_SERVER["REQUEST_URI"]);
-		wp_redirect( $redirect );
-		exit;
-	}
-}
-add_action( 'wp', 'start_restrict_access_if_logged_out', 3 );
