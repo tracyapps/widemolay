@@ -272,3 +272,11 @@ function start_display_child_pages_with_options() {
 	$output .= '</section>';
 	return $output;
 }
+
+function start_frm_custom_permission_denied_message() {
+
+	return "You must <a href='/login/'>log in</a> or <a href='/create-an-account/'>create an account</a> on this site before you can access this form. Thanks!";
+
+}
+
+add_action( 'frm_message', 'start_frm_custom_permission_denied_message' );
