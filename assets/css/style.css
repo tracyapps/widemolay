@@ -435,20 +435,20 @@ h6 {
   color: #F4CA1A; }
 
 .yellow-line {
-  border: 1px dot-dot-dash #F4CA1A;
+  border: 1px dashed #F4CA1A;
   color: #F4CA1A;
   margin: 2em 0; }
 
 .blue-line {
-  border: 1px dot-dot-dash #00d5fb;
+  border: 1px dashed #00d5fb;
   margin: 2em 0; }
 
 .red-line {
-  border: 1px dot-dot-dash #B42125;
+  border: 1px dashed #B42125;
   margin: 2em 0; }
 
 .green-line {
-  border: 1px dot-dot-dash #9fde10;
+  border: 1px dashed #9fde10;
   margin: 2em 0; }
 
 .container {
