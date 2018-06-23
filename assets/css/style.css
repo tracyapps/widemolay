@@ -638,6 +638,10 @@ input[type="submit"] {
 .frm_form_field.frm_left_container label.frm_primary_label {
   max-width: 90%; }
 
+.frm_repeat_sec {
+  padding-bottom: 1em;
+  border-bottom: 2px dashed #232D45; }
+
 .widget_search form.search-form {
   display: -ms-flexbox;
   display: flex; }
