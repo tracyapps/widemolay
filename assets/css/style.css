@@ -435,7 +435,8 @@ h6 {
   color: #F4CA1A; }
 
 hr.yellow-line {
-  border: 2px solid #F4CA1A;
+  border: 2px solid #F4CA1A !important;
+  display: block;
   color: #F4CA1A;
   margin: 2em 0; }
 
