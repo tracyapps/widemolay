@@ -434,8 +434,9 @@ h6 {
 .yellow-text {
   color: #F4CA1A; }
 
-.yellow-line {
+hr.yellow-line {
   border: 2px solid #F4CA1A;
+  color: #F4CA1A;
   margin: 2em 0; }
 
 .container {
