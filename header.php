@@ -55,7 +55,7 @@
 			<?php
 			if ( is_user_logged_in() ) {
 				global $current_user;
-				get_currentuserinfo();
+				wp_get_current_user();
 				echo '<span>Welcome ' . $current_user->display_name . '! </span>';
 				echo '<span class="red-text"> (';
 				wp_loginout();
