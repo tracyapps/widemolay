@@ -437,19 +437,19 @@ h6 {
 .yellow-line {
   border: 1px dashed #F4CA1A;
   color: #F4CA1A;
-  margin: 2em 0; }
+  margin: 1em 0; }
 
 .blue-line {
   border: 1px dashed #00d5fb;
-  margin: 2em 0; }
+  margin: 1em 0; }
 
 .red-line {
   border: 1px dashed #B42125;
-  margin: 2em 0; }
+  margin: 1em 0; }
 
 .green-line {
   border: 1px dashed #9fde10;
-  margin: 2em 0; }
+  margin: 1em 0; }
 
 .container {
   width: 90%;
