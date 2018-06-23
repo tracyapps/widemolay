@@ -291,8 +291,19 @@ h6 {
 }
 
 .yellow-line {
-	border: 2px solid $yellow !important;
-	display: block;
+	border: 1px solid $yellow;
 	color: $yellow;
+	margin: 2em 0;
+}
+.blue-line {
+	border: 1px solid $dark-blue;
+	margin: 2em 0;
+}
+.red-line {
+	border: 1px solid $red;
+	margin: 2em 0;
+}
+.green-line {
+	border: 1px solid $green;
 	margin: 2em 0;
 }

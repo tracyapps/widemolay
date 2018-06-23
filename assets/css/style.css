@@ -435,9 +435,20 @@ h6 {
   color: #F4CA1A; }
 
 .yellow-line {
-  border: 2px solid #F4CA1A !important;
-  display: block;
+  border: 1px solid #F4CA1A;
   color: #F4CA1A;
+  margin: 2em 0; }
+
+.blue-line {
+  border: 1px solid #071A33;
+  margin: 2em 0; }
+
+.red-line {
+  border: 1px solid #B42125;
+  margin: 2em 0; }
+
+.green-line {
+  border: 1px solid #9fde10;
   margin: 2em 0; }
 
 .container {
