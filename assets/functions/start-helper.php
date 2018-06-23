@@ -279,4 +279,4 @@ function start_frm_custom_permission_denied_message() {
 
 }
 
-add_action( 'frm_message', 'start_frm_custom_permission_denied_message' );
+add_action( 'frm_message', 'start_frm_custom_permission_denied_message', 10 );
