@@ -273,3 +273,21 @@ function start_display_child_pages_with_options() {
 	return $output;
 }
 
+function redirect_login_page() {
+	$refer=urlencode($_SERVER["REQUEST_URI"]);
+	if ( ! is_user_logged_in()) {
+		wp_redirect( 'http://www.ryanprejean.com/wp-login.php' . '?redirect_to=' . $refer );
+		exit();
+	}
+}
+
+add_action( 'template_redirect', 'redirect_login_page' );
+
+function redirect_after_login() {
+	global $redirect_to;
+	if (!isset($_GET['redirect_to'])) {
+		$redirect_to = get_option('siteurl');
+	}
+}
+add_action('login_form', 'redirect_after_login');
+
