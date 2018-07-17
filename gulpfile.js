@@ -103,7 +103,7 @@ gulp.task( 'browsersync', function () {
 
 	browserSync.init( files, {
 		// Replace with URL of your local site
-		proxy: "http://widemolay.test",
+		proxy: "http://widemolay.local",
 	} );
 
 	gulp.watch( './assets/scss/**/*.scss', ['styles'] );
