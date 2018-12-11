@@ -56,3 +56,19 @@ input[type="submit"] {
 	padding-bottom: 1em;
 	border-bottom: 2px dashed $logo-blue;
 }
+
+.with_frm_style {
+	.chosen-container-single {
+		.chosen-search {
+			margin-right: 20px;
+		}
+
+		.chosen-single {
+			min-height: 3.5rem;
+
+			span {
+				margin-top: 3px;
+			}
+		}
+	}
+}

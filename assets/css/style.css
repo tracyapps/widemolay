@@ -642,6 +642,14 @@ input[type="submit"] {
   padding-bottom: 1em;
   border-bottom: 2px dashed #232D45; }
 
+.with_frm_style .chosen-container-single .chosen-search {
+  margin-right: 20px; }
+
+.with_frm_style .chosen-container-single .chosen-single {
+  min-height: 3.5rem; }
+  .with_frm_style .chosen-container-single .chosen-single span {
+    margin-top: 3px; }
+
 .widget_search form.search-form {
   display: -ms-flexbox;
   display: flex; }
@@ -1220,8 +1228,7 @@ footer.site-footer {
     padding: 0; }
 
 .page-section {
-  padding: 0;
-  overflow: hidden; }
+  padding: 0; }
 
 .section-title {
   margin-top: 0;
