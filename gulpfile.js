@@ -17,23 +17,18 @@ var gulp = require( 'gulp' ),
 	browserSync = require( 'browser-sync' ).create();
 
 // Compile Sass, Autoprefix and minify
-gulp.task( 'styles', function () {
+gulp.task( 'styles', function (done) {
 	return gulp.src( './assets/scss/**/*.scss' )
 		.pipe( plumber( function ( error ) {
 			gutil.log( gutil.colors.red( error.message ) );
 			this.emit( 'end' );
 		} ) )
 		.pipe( sourcemaps.init() ) // Start Sourcemaps
-		.pipe( sass() )
-		.pipe( autoprefixer( {
-			browsers: ['last 2 versions'],
-			cascade: false
-		} ) )
+		.pipe(sass({ outputStyle: 'compact' }).on('error', sass.logError))
+		.pipe(autoprefixer({ browsers: ['> 1%', 'IE 8'], cascade: false }))
+		.pipe(sourcemaps.write('.'))
 		.pipe( gulp.dest( './assets/css/' ) )
-		.pipe( rename( {suffix: '.min'} ) )
-		.pipe( cssnano() )
-		.pipe( sourcemaps.write( '.' ) ) // Creates sourcemaps for minified styles
-		.pipe( gulp.dest( './assets/css/' ) )
+	done();
 } );
 
 // JSHint, concat, and minify JavaScript
@@ -106,8 +101,8 @@ gulp.task( 'browsersync', function () {
 		proxy: "http://widemolay.local",
 	} );
 
-	gulp.watch( './assets/scss/**/*.scss', ['styles'] );
-	gulp.watch( './assets/js/scripts/*.js', ['site-js'] ).on( 'change', browserSync.reload );
+	gulp.watch( './assets/scss/**/*.scss', gulp.series('styles') );
+	gulp.watch( './assets/js/scripts/*.js', gulp.series('site-js') ).on( 'change', browserSync.reload );
 
 } );
 
@@ -115,15 +110,15 @@ gulp.task( 'browsersync', function () {
 gulp.task( 'watch', function () {
 
 	// Watch .scss files
-	gulp.watch( './assets/scss/**/*.scss', ['styles'] );
+	gulp.watch( './assets/scss/**/*.scss', gulp.series('styles') );
 
 	// Watch svg files
-	gulp.watch( './assets/svg/originals/*.svg', ['svgSprite'] );
+	gulp.watch( './assets/svg/originals/*.svg', gulp.series('svgSprite') );
 
 	// Watch site-js files
-	gulp.watch( './assets/js/scripts/*.js', ['site-js'] );
+	gulp.watch( './assets/js/scripts/*.js', gulp.series('site-js') );
 
-	gulp.start( ['browsersync'] );
+	gulp.start( gulp.series('browsersync') );
 
 } );
 
